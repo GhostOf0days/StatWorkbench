@@ -65,7 +65,7 @@ function finish(code, signal) {
     result.smoke = JSON.parse(fs.readFileSync(smokePath, 'utf8'));
     const independentExtensions = ['copula.bivariate','dependence.association','dependence.partial','dependence.distance','dependence.mutual_information','dependence.tail_coexceedance','dependence.lead_lag','stochastic.markov_chain'];
     if (!result.smoke.ok || result.smoke.catalog !== 125 || result.smoke.coreCatalog !== 117 || !independentExtensions.every(id => result.smoke.extensions?.includes(id)) || !Number.isInteger(result.smoke.renderedControls) || result.smoke.renderedControls < 720 || !result.smoke.favorites || !result.smoke.nativeMenus || !result.smoke.worksheetReports || !result.smoke.savedProject || !result.smoke.imports || !result.smoke.export || !result.smoke.generatedData || result.smoke.formulaCell !== 431) throw new Error('Desktop smoke results are incomplete.');
-    for (const feature of ['preferences','quickAccess','chartEditing','migrationGuide','recent','originalProject','originalFormulaRecalculation','originalFormulaProvenance','originalProjectExport','originalNamedArrayFormulas','copulas']) {
+    for (const feature of ['preferences','quickAccess','chartEditing','migrationGuide','recent','legacyProject','originalFormulaRecalculation','originalFormulaProvenance','legacyProjectExport','originalNamedArrayFormulas','copulas']) {
       if (result.smoke[feature] !== true) throw new Error(`Desktop did not verify ${feature}.`);
     }
     const screenshot = path.join(output, 'desktop.png');
