@@ -1,0 +1,14 @@
+{
+  "@univerjs/protocol@1.0.4": {
+    "file": "node_modules/@univerjs/core/LICENSE",
+    "provenance": "Shared Apache-2.0 license from installed @univerjs/core@1.0.4 in the same upstream repository/version; verified against https://raw.githubusercontent.com/dream-num/univer/v1.0.4/LICENSE on 2026-10-15. The protocol package declares Apache-2.0 but omits a LICENSE file."
+  },
+  "franc-min@6.2.0": {
+    "file": "licenses/upstream/franc-6.2.0-LICENSE.txt",
+    "provenance": "https://raw.githubusercontent.com/wooorm/franc/6.2.0/license (retrieved 2026-10-15; package README links to this repository license)"
+  },
+  "react-remove-scroll-bar@2.3.8": {
+    "file": "licenses/upstream/react-remove-scroll-bar-LICENSE.txt",
+    "provenance": "https://raw.githubusercontent.com/theKashey/react-remove-scroll-bar/master/LICENSE (retrieved 2026-10-15; repository current license, because npm package omits full license text and its README only declares MIT)"
+  }
+}

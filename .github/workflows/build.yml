@@ -1,0 +1,168 @@
+name: Test and build desktop packages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, 'codex/**']
+    tags: ['v*']
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: desktop-${{ github.event.pull_request.head.repo.full_name || github.repository }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  desktop:
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    env:
+      CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+      PYTHONUTF8: '1'
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-formats.txt
+            backend/requirements-build.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install Python runtime and builder
+        run: python -m pip install -r backend/requirements-build.txt
+      - name: Install desktop dependencies
+        run: npm ci
+      - name: Collect frontend dependency notices
+        run: python scripts/collect_frontend_licenses.py
+      - name: Validate numerical engine and file boundaries
+        run: python -m pytest tests -q
+      - name: Validate desktop JavaScript syntax
+        run: npm run test:syntax
+      - name: Validate renderer data and chart behavior
+        run: npm run test:renderer
+      - name: Verify live workbook formulas, drawings and disposal
+        if: runner.os != 'Linux'
+        run: node scripts/verify_workbook.cjs
+      - name: Verify shared Excel ribbon commands
+        run: python scripts/generate_excel_ribbon.py --check
+      - name: Build compiled Windows spreadsheet adapter
+        if: runner.os == 'Windows'
+        run: npm run build:windows-bridge
+      - name: Build and inspect Windows Excel COM add-in
+        if: runner.os == 'Windows'
+        run: npm run build:excel-addin
+      - name: Check Windows verification scope
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $bridge = Get-Content test-artifacts/windows-spreadsheet-bridge/build-verification.json -Raw | ConvertFrom-Json
+          $addin = Get-Content test-artifacts/windows-excel-addin/build-verification.json -Raw | ConvertFrom-Json
+          if (!$bridge.verified -or !$addin.verified) { throw 'Compiled Windows verification did not pass.' }
+          if ($bridge.excelAutomationVerified -or $addin.excelAutomationVerified) { throw 'Managed checks must not claim a native Excel roundtrip.' }
+          "### Windows adapter checks" >> $env:GITHUB_STEP_SUMMARY
+          "Compiled bridge and add-in verified; $($addin.analysisCommands) analysis buttons. Excel installed: $($addin.excelInstalled). Actual Excel automation remains a separate test." >> $env:GITHUB_STEP_SUMMARY
+      - name: Freeze Python backend
+        run: python scripts/build_backend.py
+      - name: Compare source and frozen analysis results
+        run: python scripts/verify_frozen_engine.py
+      - name: Verify bundled statistical file readers
+        run: python scripts/verify_frozen_formats.py
+      - name: Package native application
+        run: npm run pack -- --publish never
+      - name: Verify native desktop on Windows and macOS
+        if: runner.os != 'Linux'
+        env:
+          STATWORKBENCH_SMOKE_MINIMUM: '1'
+        run: node scripts/verify_desktop.cjs --packaged
+      - name: Verify native desktop on Linux
+        if: runner.os == 'Linux'
+        env:
+          STATWORKBENCH_SMOKE_MINIMUM: '1'
+        run: |
+          # An unpacked app has not run the Linux installer's sandbox setup.
+          # Ubuntu hosted runners restrict unprivileged user namespaces, so
+          # configure Chromium's supported SUID sandbox instead of disabling it.
+          sudo chown root:root release/linux-unpacked/chrome-sandbox
+          sudo chmod 4755 release/linux-unpacked/chrome-sandbox
+          xvfb-run -a node scripts/verify_desktop.cjs --packaged
+      - name: Build desktop distribution
+        run: npm run dist -- --publish never
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verification-${{ matrix.os }}
+          path: test-artifacts/
+          if-no-files-found: warn
+      - uses: actions/upload-artifact@v4
+        with:
+          name: statworkbench-${{ matrix.os }}
+          path: |
+            release/*.dmg
+            release/*.zip
+            release/*.exe
+            release/*.AppImage
+            release/*.deb
+            release/*.tar.gz
+          if-no-files-found: error
+
+  publish-release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: desktop
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: statworkbench-*
+          path: dist-assets
+          merge-multiple: true
+      - name: Create source archive and validate release assets
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          import os
+
+          version = json.loads(Path("package.json").read_text())["version"]
+          tag = os.environ["GITHUB_REF_NAME"]
+          if tag != f"v{version}":
+              raise SystemExit(f"Tag {tag!r} must match package version v{version}.")
+          files = [path.name for path in Path("dist-assets").iterdir() if path.is_file()]
+          required = {
+              "macOS disk image": ".dmg",
+              "Windows application": ".exe",
+              "Linux AppImage": ".AppImage",
+          }
+          for label, suffix in required.items():
+              if not any(name.endswith(suffix) for name in files):
+                  raise SystemExit(f"Missing {label} release asset ({suffix}). Found: {files}")
+          PY
+          python3 scripts/create_source_release.py
+      - name: Publish downloadable release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            dist-assets/* \
+            release/statworkbench-*-source.zip \
+            release/statworkbench-*-source.manifest.json \
+            release/statworkbench-*-source.SHA256SUMS \
+            --verify-tag \
+            --generate-notes \
+            --title "StatWorkbench ${GITHUB_REF_NAME#v}"

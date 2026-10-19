@@ -1,0 +1,39 @@
+{
+  "scope": "Unmodified notices from matching installed-version PyPI source distributions, because their installed wheel lacks these files.",
+  "packages": [
+    {
+      "name": "dbfread",
+      "version": "2.0.7",
+      "source": "https://pypi.org/project/dbfread/2.0.7/",
+      "source_archive": "dbfread-2.0.7.tar.gz",
+      "source_archive_sha256": "07c8a9af06ffad3f6f03e8fe91ad7d2733e31a26d2b72c4dd4cfbae07ee3b73d",
+      "files": [
+        {
+          "path": "dbfread-2.0.7/LICENSE.txt",
+          "sha256": "77f8d8a502217446e4832bff573465789d5815cd470535bf19fe7367c48a6e5f"
+        }
+      ]
+    },
+    {
+      "name": "odfpy",
+      "version": "1.4.1",
+      "source": "https://pypi.org/project/odfpy/1.4.1/",
+      "source_archive": "odfpy-1.4.1.tar.gz",
+      "source_archive_sha256": "db766a6e59c5103212f3cc92ec8dd50a0f3a02790233ed0b52148b70d3c438ec",
+      "files": [
+        {
+          "path": "odfpy-1.4.1/APACHE-LICENSE-2.0.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "odfpy-1.4.1/GPL-LICENSE-2.txt",
+          "sha256": "ab15fd526bd8dd18a9e77ebc139656bf4d33e97fc7238cd11bf60e2b9b8666c6"
+        },
+        {
+          "path": "odfpy-1.4.1/README.md.txt",
+          "sha256": "d543a53509fa2b23cee7a3f3ae4996bc4b5ffbe73defacec06f7ea4e004bda24"
+        }
+      ]
+    }
+  ]
+}

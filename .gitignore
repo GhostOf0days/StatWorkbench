@@ -1,0 +1,14 @@
+node_modules/
+renderer-dist/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+build/
+dist/
+dist-backend/
+release/
+*.spec
+.DS_Store
+test-artifacts/
+dist-windows/

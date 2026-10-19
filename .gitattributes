@@ -1,0 +1,3 @@
+# Dependency notices are verified against upstream byte hashes. Git must not
+# rewrite their line endings during a Windows checkout.
+licenses/** -text

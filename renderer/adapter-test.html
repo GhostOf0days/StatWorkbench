@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><title>Workbook adapter verification</title><style>body{font:14px system-ui;margin:0}#results{padding:8px;white-space:pre-wrap;max-height:200px;overflow:auto}#book{height:650px;width:100%}</style></head>
+<body><div id="results">Running workbook verification…</div><div id="book"></div><script type="module">
+import { createSpreadsheet } from './workbook.js';
+const output = document.getElementById('results');
+const report = [];
+const rendererErrors = [];
+window.addEventListener('error', event => rendererErrors.push(event.error?.stack || event.message));
+window.addEventListener('unhandledrejection', event => rendererErrors.push(String(event.reason?.stack || event.reason)));
+// Hold scheduled idle callbacks so replacement/disposal deterministically runs
+// while Univer still has pending lazy row-height work.
+const nativeRequestIdleCallback = window.requestIdleCallback.bind(window);
+let holdIdle = false;
+const heldIdle = [];
+window.requestIdleCallback = (callback, options) => nativeRequestIdleCallback(deadline => {
+  if (holdIdle) heldIdle.push(callback); else callback(deadline);
+}, options);
+async function queuePendingAutoHeight(book, taskId) {
+  holdIdle = true;
+  await book.execute('sheet.operation.mark-dirty-row-auto-height', {
+    unitId: book.getSnapshot().id, subUnitId: book.getActiveSheetId(), id: taskId,
+    ranges: [{startRow:0,endRow:999,startColumn:0,endColumn:0}],
+  });
+  for (let attempt=0; attempt<100 && !heldIdle.length; attempt++) await new Promise(resolve => setTimeout(resolve, 10));
+  check(heldIdle.length > 0, 'auto-height work is pending before ' + taskId);
+}
+async function releasePendingIdle() {
+  holdIdle = false;
+  const callbacks = heldIdle.splice(0);
+  for (const callback of callbacks) callback({didTimeout:false,timeRemaining:()=>50});
+  await new Promise(resolve => setTimeout(resolve, 100));
+  check(rendererErrors.length === 0, 'no uncaught renderer errors: ' + rendererErrors.join('\n'));
+}
+function check(condition, label) { if (!condition) throw new Error(label); report.push(`PASS ${label}`); output.textContent = report.join('\n'); }
+try {
+  let changes = 0;
+  const book = await createSpreadsheet(document.getElementById('book'), {onChange: () => changes++});
+  await new Promise(resolve => setTimeout(resolve, 300));
+  check((await book.readSheet(book.getActiveSheetId())).length === 0, 'blank workbook has no data');
+  check(changes === 0, 'blank initialization stays clean');
+  const sheet = book.addMatrix('Data', [['Value','ID','Literal'],[2,'00123','=2+2'],[3,null,null]]);
+  check((await book.readSheet(sheet))[1][1] === '00123', 'import preserves text identifiers');
+  check((await book.readSheet(sheet))[1][2] === '=2+2', 'import keeps formula-looking text literal');
+  book.selectRange(sheet, 'A4'); book.setCellValue('=SUM(A2:A3)');
+  await book.commitEditing();
+  check((await book.readRange(sheet, 'A4'))[0][0] === 5, 'formula computes SUM');
+  book.setRangeStyle(sheet, 'A1:C1', { bold: true, fillColor: '#e5efe9', borderBottom: true });
+  const snapshot = book.getSnapshot();
+  check(snapshot.sheets[sheet].cellData[3][0].f === '=SUM(A2:A3)', 'snapshot retains formula');
+  book.selectRange(sheet, 'A2'); book.setCellValue(10); await book.commitEditing();
+  check((await book.readRange(sheet, 'A4'))[0][0] === 13, 'formula recalculates after edit');
+  await book.undo(); await book.commitEditing();
+  check((await book.readRange(sheet, 'A4'))[0][0] === 5, 'undo restores values and formula result');
+  await book.redo(); await book.commitEditing();
+  check((await book.readRange(sheet, 'A4'))[0][0] === 13, 'redo restores edit');
+  await book.loadSnapshot(snapshot); await book.commitEditing();
+  check((await book.readRange(sheet, 'A4'))[0][0] === 5, 'snapshot reload retains computed formula');
+  check(book.getActiveSheetId() === sheet, 'snapshot reload retains active sheet');
+  const reportId = book.addMatrix('Results', [['Summary'],['Mean',2.5]], { headerRows: [0] });
+  check(book.getActiveSheetId() === reportId && book.getSheets().length === 3, 'report creates and activates separate sheet');
+  book.selectSheet(sheet); book.selectRange(sheet, 'A2:A4');
+  check(book.getSelection().rangeA1 === 'A2:A4', 'selection reports A1 coordinates');
+  book.setZoom(125); check(book.getZoom() === 1.25, 'zoom is applied');
+  const chartId = await book.addChart(reportId, {type:'histogram',title:'Counts and normal overlay',binEdges:[0,1,2],series:[{name:'Count',x:[.5,1.5],y:[2,3]},{name:'Overlay',type:'line',x:[0,1,2],y:[0,2,0]}]}, {row:1004,column:0});
+  check(book.getChartImages(reportId).includes(chartId), 'chart is embedded in worksheet');
+  check(book.getSheets().find(sheet => sheet.id === reportId).rowCount > 1004, 'chart below a long report extends worksheet rows');
+  const withChart = book.getSnapshot();
+  check(JSON.stringify(withChart.resources).includes('data:image/svg+xml;base64,'), 'snapshot embeds chart data without external URL');
+  const registered=withChart.custom.statworkbenchCharts.find(entry=>entry.drawingId===chartId);
+  check(registered?.chart.title==='Counts and normal overlay'&&registered.sheetId===reportId&&registered.position.row===1004, 'snapshot retains chart definition and live placement for native export');
+  await book.updateChart(reportId,chartId,{...registered.chart,title:'Edited native export chart'});
+  check(book.getSnapshot().custom.statworkbenchCharts.find(entry=>entry.drawingId===chartId)?.chart.title==='Edited native export chart','chart edits update export definition');
+  await book.undo();await book.commitEditing();
+  check(book.getSnapshot().custom.statworkbenchCharts.find(entry=>entry.drawingId===chartId)?.chart.title==='Counts and normal overlay','undo restores chart definition matching its image');
+  await book.redo();await book.commitEditing();
+  check(book.getSnapshot().custom.statworkbenchCharts.find(entry=>entry.drawingId===chartId)?.chart.title==='Edited native export chart','redo restores edited chart definition');
+  await book.loadSnapshot(withChart); await book.commitEditing();
+  check(book.getChartImages(reportId).includes(chartId), 'chart survives snapshot reload');
+  check(book.getSnapshot().custom.statworkbenchCharts.find(entry=>entry.drawingId===chartId)?.chart.title==='Counts and normal overlay','chart definition survives project reload');
+  const pictureCanvas=document.createElement('canvas');pictureCanvas.width=8;pictureCanvas.height=4;
+  const pictureContext=pictureCanvas.getContext('2d');pictureContext.fillStyle='#0033cc';pictureContext.fillRect(0,0,4,4);pictureContext.fillStyle='#33cc00';pictureContext.fillRect(4,0,4,4);
+  const pictureSource=pictureCanvas.toDataURL('image/png'),pictureIds=[];
+  for(let mode=0;mode<4;mode++) pictureIds.push(await book.addImage(reportId,pictureSource,{left:15.25+mode*110,top:47.5,width:90,height:70,native:{name:`Picture ${mode}`,pictureStretch:mode,backColor:'#ffffff',borderStyle:'solid',borderWidth:2,borderColor:'#112233'},originalIndex:mode}));
+  const pictureSnapshot=book.getSnapshot(),pictureEntries=pictureSnapshot.custom.statworkbenchImages;
+  check(pictureEntries.length===4&&pictureEntries.every((entry,index)=>entry.source===pictureSource&&entry.originalIndex===index&&entry.native.pictureStretch===index),'all four native picture layouts retain original source and identity');
+  check(pictureEntries.every((entry,index)=>Math.abs(entry.position.left-(15.25+index*110))<=.100001&&Math.abs(entry.position.top-47.5)<=.100001&&Math.abs(entry.position.width-90)<=.100001&&Math.abs(entry.position.height-70)<=.100001),'picture placement preserves offsets and size within the renderer 0.1-pixel precision');
+  check(pictureSnapshot.custom.statworkbenchCharts.length===1,'picture restoration does not duplicate or reclassify charts');
+  const pictureResource=JSON.parse(pictureSnapshot.resources.find(resource=>resource.name==='SHEET_DRAWING_PLUGIN').data);
+  async function picturePixel(source,x,y){const image=new Image();await new Promise((resolve,reject)=>{image.onload=resolve;image.onerror=reject;image.src=source;});const canvas=document.createElement('canvas');canvas.width=image.naturalWidth;canvas.height=image.naturalHeight;const context=canvas.getContext('2d');context.drawImage(image,0,0);return [...context.getImageData(x,y,1,1).data];}
+  const samePixel=(actual,expected)=>actual.every((value,index)=>Math.abs(value-expected[index])<=1);
+  const displayed=pictureIds.map(id=>pictureResource[reportId].data[id].source);
+  check(samePixel(await picturePixel(displayed[0],20,35),[0,51,204,255]),'stretch picture fills its box');
+  check(samePixel(await picturePixel(displayed[1],20,35),[255,255,255,255])&&samePixel(await picturePixel(displayed[1],44,34),[0,51,204,255]),'center picture retains natural size');
+  check(samePixel(await picturePixel(displayed[2],20,5),[255,255,255,255])&&samePixel(await picturePixel(displayed[2],20,20),[0,51,204,255]),'contain picture preserves aspect ratio with centered margins');
+  check(samePixel(await picturePixel(displayed[3],5,3),[51,204,0,255]),'natural picture starts at the top-left corner');
+  const oversizedId=await book.addImage(reportId,pictureSource,{left:500,top:47.5,width:4,height:2,native:{pictureStretch:1}});
+  const oversizedResources=JSON.parse(book.getSnapshot().resources.find(resource=>resource.name==='SHEET_DRAWING_PLUGIN').data);
+  check(samePixel(await picturePixel(oversizedResources[reportId].data[oversizedId].source,3,1),[0,51,204,255]),'oversized center picture follows native top-left cropping');
+
+  await book.execute('sheet.command.set-drawing-placement',{unitId:pictureSnapshot.id,subUnitId:reportId,drawings:[{drawingId:pictureIds[2],placement:{kind:'0',bounds:{left:235.25,top:47.5,width:170,height:45}}}]});
+  const resizedPicture=book.getSnapshot().custom.statworkbenchImages.find(entry=>entry.drawingId===pictureIds[2]);
+  check(resizedPicture.source!==pictureSource&&resizedPicture.native.pictureStretch===0&&resizedPicture.native.borderStyle==='none'&&resizedPicture.native.dynamicMove===true&&resizedPicture.native.dynamicSize===false,'nonuniform contain-picture resize exports displayed pixels and live anchor behavior');
+  await book.undo();await book.commitEditing();
+  const undonePicture=book.getSnapshot().custom.statworkbenchImages.find(entry=>entry.drawingId===pictureIds[2]);
+  check(undonePicture.source===pictureSource&&undonePicture.native.pictureStretch===2,'undo restores original fitted-picture source and layout');
+  await book.loadSnapshot(pictureSnapshot);await book.commitEditing();
+  check(JSON.stringify(book.getSnapshot().custom.statworkbenchImages)===JSON.stringify(pictureEntries),'picture definitions and live drawing placements survive project reload');
+  let externalPictureRejected=false;try{await book.addImage(reportId,'https://example.invalid/picture.png',{left:0,top:0,width:10,height:10});}catch{externalPictureRejected=true;}
+  check(externalPictureRejected,'picture restoration never fetches external sources');
+  book.selectSheet(reportId);
+  const editId = book.addMatrix('Edit operations', [[1],[2],[3]]);
+  book.selectRange(editId, 'D5'); book.setCellValue(123, {sheetId:editId,row:4,column:2});
+  check((await book.readRange(editId, 'C5'))[0][0] === 123 && book.getSelection().rangeA1 === 'D5', 'explicit cell write preserves current selection');
+  book.selectRange(editId, 'B1'); book.setCellValue('=A1*2');
+  book.selectRange(editId, 'B1:B3'); await book.fillSelection('down');
+  check(JSON.stringify(await book.readRange(editId, 'B1:B3')) === '[[2],[4],[6]]', 'fill down adjusts relative formulas');
+  book.selectRange(editId, 'C3'); book.setCellValue(9); book.selectRange(editId, 'C1:C3'); await book.fillSelection('up');
+  check(JSON.stringify(await book.readRange(editId, 'C1:C3')) === '[[9],[9],[9]]', 'fill up copies last selected row');
+  book.selectRange(editId, 'D1'); book.setCellValue(7); book.selectRange(editId, 'D1:F1'); await book.fillSelection('right');
+  check(JSON.stringify(await book.readRange(editId, 'D1:F1')) === '[[7,7,7]]', 'fill right copies first selected column');
+  book.selectRange(editId, 'F2'); book.setCellValue(8); book.selectRange(editId, 'D2:F2'); await book.fillSelection('left');
+  check(JSON.stringify(await book.readRange(editId, 'D2:F2')) === '[[8,8,8]]', 'fill left copies last selected column');
+  book.selectRange(editId, 'A4'); book.setCellValue('Occupied'); book.selectRange(editId, 'A1:A3');
+  const aggregate = await book.aggregateSelection('SUM');
+  check(aggregate.rangeA1 === 'A5' && aggregate.value === 6 && (await book.readRange(editId, 'A4'))[0][0] === 'Occupied', 'quick aggregate finds next free cell without overwrite');
+  book.selectRange(editId, 'H1:I1'); book.setCellValue('Merged'); book.mergeSelection(true);
+  check(book.getSnapshot().sheets[editId].mergeData.some(range => range.startColumn === 7 && range.endColumn === 8), 'merge selection updates workbook geometry');
+  book.mergeSelection(false); check(!book.getSnapshot().sheets[editId].mergeData.length, 'unmerge restores cell geometry');
+  book.selectRange(editId, 'H1'); book.formatSelection({bold:true,fillColor:'#eef0ff'}); book.clearFormatting();
+  check((await book.readRange(editId, 'H1'))[0][0] === 'Merged', 'clear formatting preserves cell contents');
+  book.formatSelection({bold:true,italic:true}); check(book.getSelectionStyle().bold && book.getSelectionStyle().italic, 'selection style reads bold and italic');
+  book.formatSelection({bold:!book.getSelectionStyle().bold,italic:!book.getSelectionStyle().italic});
+  check(!book.getSelectionStyle().bold && !book.getSelectionStyle().italic, 'selection style supports toggling off');
+  book.selectRange(editId, 'A2'); await book.insertSelectionRows();
+  check(JSON.stringify(await book.readRange(editId, 'A1:A4')) === '[[1],[null],[2],[3]]', 'insert row shifts values');
+  book.selectRange(editId, 'A2'); await book.deleteSelectionRows();
+  check(JSON.stringify(await book.readRange(editId, 'A1:A3')) === '[[1],[2],[3]]', 'delete row restores positions');
+  book.selectRange(editId, 'B1'); await book.insertSelectionColumns();
+  check((await book.readRange(editId, 'C1'))[0][0] === 2, 'insert column preserves shifted formula result');
+  book.selectRange(editId, 'B1'); await book.deleteSelectionColumns();
+  check((await book.readRange(editId, 'B1'))[0][0] === 2, 'delete column restores formula position');
+  const sortId = book.addMatrix('Sorting', [['Value','Label'],[3,'Three'],[1,'One'],[2,'Two']]);
+  book.selectRange(sortId, 'A1:B4'); await book.sortSelection(true,{hasHeader:true});
+  check(JSON.stringify(await book.readSheet(sortId)) === '[["Value","Label"],[1,"One"],[2,"Two"],[3,"Three"]]', 'ascending sort keeps header and row associations');
+  await book.sortSelection(false,{hasHeader:true});
+  check((await book.readRange(sortId, 'A2'))[0][0] === 3, 'descending sort reverses order');
+  await book.undo(); await book.commitEditing();
+  check((await book.readRange(sortId, 'A2'))[0][0] === 1, 'sort supports undo');
+  const matrixId = book.addMatrix('Matrix calculation', [[1,2,null,5,6,null,null,2,1,1],[3,4,null,7,8,null,null,4,2,2],[null,null,null,null,null,null,null,6,3]]);
+  const matrixCases = [['=INDEX(MMULT(A1:B2,D1:E2),1,1)',19],['=INDEX(TRANSPOSE(A1:B2),2,1)',2],['=INDEX(MINVERSE(A1:B2),1,2)',1],['=INDEX(A1:B2*2,2,2)',8],['=INDEX(LINEST(H1:H3,I1:I3),1,1)',2],['=INDEX(LINEST(H1:H3,I1:I3),1,2)',0],['=INDEX(FREQUENCY(I1:I3,J1:J2),3,1)',1],['=SIN(PI()/2)',1],['=COS(0)',1],['=TEXT(12.5,"0.00")','12.50'],['=DATE(2024,1,2)',45293],['=YEAR(DATE(2024,1,2))',2024],['=CONCATENATE("ab",UPPER("cd"))','abCD'],['=NORM.DIST(0,0,1,TRUE)',.5],['=PMT(0,10,100)',-10]];
+  matrixCases.push(['=ISO.CEILING(-4.3,-2)',-4],['=ISO.CEILING(4.3)',5],['=EURO("DEM")',1.96],['=EUROCONVERT(1.2,"DEM","EUR")',.61],['=AMORDEGRC(2400,39679,39813,300,1,0.15,1)',776],['=IFERROR(AMORDEGRC(2400,39679,39813,300,1,0.15,2),"error handled")','error handled']);
+  for (let index=0;index<matrixCases.length;index++) book.setCellValue(matrixCases[index][0], {sheetId:matrixId,row:index,column:6});
+  await book.commitEditing();
+  const matrixResults=await book.readRange(matrixId,`G1:G${matrixCases.length}`);
+  for(let index=0;index<matrixCases.length;index++) check(typeof matrixCases[index][1]==='number'?typeof matrixResults[index][0]==='number'&&Math.abs(matrixResults[index][0]-matrixCases[index][1])<1e-12:matrixResults[index][0]===matrixCases[index][1], `${matrixCases[index][0]} computes ${matrixCases[index][1]} (received ${matrixResults[index][0]})`);
+  const spillId = book.addMatrix('Shared legacy array', [[1,2],[3,4]]);
+  book.setCellValue('=SWB.CSE(RAND()+A1:B2,3,3)', {sheetId:spillId,row:4,column:3});
+  book.setCellValue('=SWB.CSE(RAND(),2,2)', {sheetId:spillId,row:0,column:7});
+  await book.commitEditing();
+  async function checkSpills(first) {
+    const out=await book.readRange(spillId,'D5:F7'),offset=out[0][0]-first;
+    check(typeof offset==='number'&&offset>=0&&offset<1,'volatile array retains one random draw');
+    for(const [r,c,v] of [[0,0,first],[0,1,2],[1,0,3],[1,1,4]]) check(Math.abs(out[r][c]-v-offset)<1e-14,'array output shares full-precision calculation '+r+','+c);
+    check(out[2].every(v=>v==='#N/A')&&out[0][2]==='#N/A'&&out[1][2]==='#N/A','legacy array pads outside its multirow and multicolumn result');
+    const scalar=await book.readRange(spillId,'H1:I2');check(scalar.flat().every(v=>v===scalar[0][0]),'scalar volatile array broadcasts the same value');
+    const all=await book.readSheet(spillId);check(all.length===7&&all[0].length===9&&all[6][5]==='#N/A','whole-sheet analysis includes full spill extent');
+  }
+  await checkSpills(1);
+  book.setCellValue(10,{sheetId:spillId,row:0,column:0});await book.commitEditing();await checkSpills(10);
+  await book.loadSnapshot(book.getSnapshot());await book.commitEditing();await checkSpills(10);
+  book.selectRange(spillId,'E6');
+  check(book.getSelection().value===(await book.readRange(spillId,'E6'))[0][0],'selection reads the full-precision spill value');
+  book.selectRange(spillId,'D5:D5');
+  const spillAggregate=await book.aggregateSelection('SUM');
+  check(spillAggregate.rangeA1==='D8','quick aggregate skips occupied spill children');
+  book.selectSheet(sortId);
+  await queuePendingAutoHeight(book, 'project replacement');
+  // Exercise more distinct sheet identities than the import limit without
+  // creating hundreds of rendered sheets. Univer safely ignores missing-sheet
+  // work; the adapter's public-operation tracker must still terminate.
+  const lifecycleUnitId = book.getSnapshot().id;
+  for (let index=0; index<260; index++) await book.execute('sheet.operation.mark-dirty-row-auto-height', {
+    unitId:lifecycleUnitId,subUnitId:`lifecycle-sheet-${index}`,id:`distinct-${index}`,
+    ranges:[{startRow:0,endRow:0,startColumn:0,endColumn:0}],
+  });
+  check(true, 'auto-height tracking terminates above 256 distinct sheet identities');
+  // Exceed the tracking bound while callbacks are held; compaction must retain
+  // pending work and remain cancellable when the project is replaced.
+  for (let index=0; index<300; index++) await book.execute('sheet.operation.mark-dirty-row-auto-height', {
+    unitId:book.getSnapshot().id,subUnitId:sortId,id:`compaction-${index}`,
+    ranges:[{startRow:index,endRow:index,startColumn:0,endColumn:0}],
+  });
+  await book.loadSnapshot(book.getSnapshot());
+  await releasePendingIdle();
+  check((await book.readRange(sortId, 'A2'))[0][0] === 1, 'project replacement retains data with pending auto-height work');
+  const removedSheet = book.addMatrix('Pending removal', [['wrapped text']]);
+  await queuePendingAutoHeight(book, 'worksheet removal');
+  await book.execute('sheet.mutation.remove-sheet', {unitId:book.getSnapshot().id,subUnitId:removedSheet});
+  await releasePendingIdle();
+  check(!book.getSheets().some(sheet => sheet.id === removedSheet), 'worksheet removal cancels pending auto-height work');
+  book.selectSheet(sortId);
+  await book.commitEditing();
+  await queuePendingAutoHeight(book, 'adapter disposal');
+  book.dispose();
+  await releasePendingIdle();
+  window.requestIdleCallback = nativeRequestIdleCallback;
+  output.textContent = `ALL ${report.length} CHECKS PASSED\n${report.join('\n')}`;
+} catch (error) { output.textContent = `FAILED: ${error.stack || error}\n${report.join('\n')}`; }
+</script></body></html>

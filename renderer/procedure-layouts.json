@@ -1,0 +1,6903 @@
+{
+  "1001": {
+    "sta.bst.ds.ao.0": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Plot histogram",
+      "sourceKey": "sta.bst.ds.ao.0",
+      "sourceKind": "checkbox"
+    },
+    "sta.bst.ds.ao.1": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": true,
+      "order": 1,
+      "sourceLabel": "Overlay histogram with normal curve",
+      "sourceKey": "sta.bst.ds.ao.1",
+      "sourceKind": "checkbox",
+      "parent": "sta.bst.ds.ao.0",
+      "parentInverse": false
+    },
+    "sta.bst.ds.ao.2": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": true,
+      "order": 2,
+      "sourceLabel": "Number of intervals [NI>2 or 0 for auto]",
+      "sourceKey": "sta.bst.ds.ao.2",
+      "sourceKind": "numberint",
+      "validator": "0,3-",
+      "parent": "sta.bst.ds.ao.0",
+      "parentInverse": false
+    },
+    "sta.percentile.def": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Percentiles definition",
+      "sourceKey": "sta.percentile.def",
+      "sourceKind": "list"
+    },
+    "sta.bst.ds.report": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Report",
+      "sourceKey": "sta.bst.ds.report",
+      "sourceKind": "list"
+    },
+    "vars.ui.sortby": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Sort variables by",
+      "sourceKey": "vars.ui.sortby",
+      "sourceKind": "list"
+    },
+    "sta.chart.qq": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Q-Q Plot",
+      "sourceKey": "sta.chart.qq",
+      "sourceKind": "checkbox"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1002": {
+    "sta.bst.ds.ao.0": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Plot histogram",
+      "sourceKey": "sta.bst.ds.ao.0",
+      "sourceKind": "checkbox"
+    },
+    "sta.bst.ds.ao.1": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": true,
+      "order": 1,
+      "sourceLabel": "Overlay histogram with normal curve",
+      "sourceKey": "sta.bst.ds.ao.1",
+      "sourceKind": "checkbox",
+      "parent": "sta.bst.ds.ao.0",
+      "parentInverse": false
+    },
+    "sta.bst.ds.ao.2": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": true,
+      "order": 2,
+      "sourceLabel": "Number of intervals [NI>2 or 0 for auto]",
+      "sourceKey": "sta.bst.ds.ao.2",
+      "sourceKind": "numberint",
+      "validator": "0,3-",
+      "parent": "sta.bst.ds.ao.0",
+      "parentInverse": false
+    },
+    "sta.percentile.def": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Percentiles definition",
+      "sourceKey": "sta.percentile.def",
+      "sourceKind": "list"
+    },
+    "sta.bst.ds.report": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Report",
+      "sourceKey": "sta.bst.ds.report",
+      "sourceKind": "list"
+    },
+    "vars.ui.sortby": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Sort variables by",
+      "sourceKey": "vars.ui.sortby",
+      "sourceKind": "list"
+    },
+    "sta.chart.qq": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Q-Q Plot",
+      "sourceKey": "sta.chart.qq",
+      "sourceKind": "checkbox"
+    },
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable",
+      "sourceKey": "sta.series",
+      "sourceKind": "VarRange"
+    },
+    "group": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Groups",
+      "sourceKey": "GROUPS",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "1004": {
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable",
+      "sourceKey": "sta.series",
+      "sourceKind": "VarRange"
+    },
+    "mean": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Hypothesized Population Mean",
+      "sourceKey": "hypoth_mean",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "variance": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Population Variance",
+      "sourceKey": "sta.bst.ztest.servar",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "1007": {
+    "x": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable #1",
+      "sourceKey": "SERIES_N(1)",
+      "sourceKind": "VarRange"
+    },
+    "y": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Variable #2",
+      "sourceKey": "SERIES_N(2)",
+      "sourceKind": "VarRange"
+    },
+    "difference": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Hypothesized Mean Difference",
+      "sourceKey": "HYP_MEAN",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "variance_x": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Population Variance #1",
+      "sourceKey": "sta.bst.ztest.servar.1",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "variance_y": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Population Variance #2",
+      "sourceKey": "sta.bst.ztest.servar.2",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "1003": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    },
+    "TTEST_OS_CONST": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Hypothesized value",
+      "sourceKey": "TTEST_OS_CONST",
+      "sourceKind": "VarRange",
+      "constantSubstitute": true
+    },
+    "alternative": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Alternative hypothesis H1: Mu ? Mu0",
+      "sourceKey": "sta.bst.ttest.h1",
+      "sourceKind": "list"
+    }
+  },
+  "1005": {
+    "x": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable #1",
+      "sourceKey": "SERIES_N(1)",
+      "sourceKind": "VarRange"
+    },
+    "y": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Variable #2",
+      "sourceKey": "SERIES_N(2)",
+      "sourceKind": "VarRange"
+    },
+    "test_type": {
+      "placement": "advanced",
+      "tab": "T-Test",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "T-Test Type",
+      "sourceKey": "sta.bst.compmeans.ttesttype",
+      "sourceKind": "list"
+    },
+    "difference": {
+      "placement": "advanced",
+      "tab": "T-Test",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Hypothesized Mean Difference",
+      "sourceKey": "HYP_MEAN",
+      "sourceKind": "number"
+    },
+    "ttest.paired.plot.ui": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Paired t-test: Plot paired profiles",
+      "sourceKey": "ttest.paired.plot.ui",
+      "sourceKind": "checkbox"
+    }
+  },
+  "10052": {
+    "n1": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Sample Size #1",
+      "sourceKey": "sta.series.ttest.n.1",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "mean1": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Mean #1",
+      "sourceKey": "sta.series.ttest.mean.1",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "sd1": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Standard Deviation #1",
+      "sourceKey": "sta.series.ttest.stddev.1",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "n2": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Sample Size #2",
+      "sourceKey": "sta.series.ttest.n.2",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "mean2": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Mean #2",
+      "sourceKey": "sta.series.ttest.mean.2",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "sd2": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Standard Deviation #2",
+      "sourceKey": "sta.series.ttest.stddev.2",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "test_type": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "T-Test Type",
+      "sourceKey": "sta.bst.compmeans.ttesttype",
+      "sourceKind": "list"
+    },
+    "difference": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Hypothesized Mean Difference",
+      "sourceKey": "HYP_MEAN",
+      "sourceKind": "number"
+    }
+  },
+  "10053": {
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable",
+      "sourceKey": "sta.series",
+      "sourceKind": "VarRange"
+    },
+    "group": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Groups",
+      "sourceKey": "GROUPS",
+      "sourceKind": "VarRangeText"
+    },
+    "GROUP.1": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Code for Group #1",
+      "sourceKey": "GROUP.1",
+      "sourceKind": "string",
+      "fill": "V.2.LEVELS"
+    },
+    "GROUP.2": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Code for Group #2",
+      "sourceKey": "GROUP.2",
+      "sourceKind": "string",
+      "fill": "V.2.LEVELS"
+    },
+    "test_type": {
+      "placement": "advanced",
+      "tab": "T-Test",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "T-Test Type",
+      "sourceKey": "sta.bst.compmeans.ttesttype",
+      "sourceKind": "list"
+    },
+    "difference": {
+      "placement": "advanced",
+      "tab": "T-Test",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Hypothesized Mean Difference",
+      "sourceKey": "HYP_MEAN",
+      "sourceKind": "number"
+    }
+  },
+  "1008": {
+    "x": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable #1",
+      "sourceKey": "SERIES_N(1)",
+      "sourceKind": "VarRange"
+    },
+    "y": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Variable #2",
+      "sourceKey": "SERIES_N(2)",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1009": {
+    "bst.corr.table.pval.ui": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Correlations table: Display p-value",
+      "sourceKey": "bst.corr.table.pval.ui",
+      "sourceKind": "checkbox"
+    },
+    "sta.tail.h": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 1,
+      "sourceLabel": "Hypothesis Test",
+      "sourceKey": "sta.tail.h",
+      "sourceKind": "list"
+    },
+    "bst.corr.table.trse.ui": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Correlations table: Display standard error and t-statistic",
+      "sourceKey": "bst.corr.table.trse.ui",
+      "sourceKind": "checkbox"
+    },
+    "bst.corr.ui.listrs": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "List correlation coefficients (largest to smallest)",
+      "sourceKey": "bst.corr.ui.listrs",
+      "sourceKind": "checkbox"
+    },
+    "ui.freezecols": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Freeze header columns",
+      "sourceKey": "ui.freezecols",
+      "sourceKind": "checkbox"
+    },
+    "sta.scatterplots": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Scatter plots",
+      "sourceKey": "sta.scatterplots",
+      "sourceKind": "list"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1010": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1016": {
+    "bst.corr.table.pval.ui": {
+      "placement": "advanced",
+      "tab": "Report",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Correlations table: Display p-value",
+      "sourceKey": "bst.corr.table.pval.ui",
+      "sourceKind": "checkbox"
+    },
+    "sta.tail.h": {
+      "placement": "advanced",
+      "tab": "Report",
+      "indent": true,
+      "order": 1,
+      "sourceLabel": "Hypothesis Test",
+      "sourceKey": "sta.tail.h",
+      "sourceKind": "list",
+      "parent": "bst.corr.table.pval.ui",
+      "parentInverse": false
+    },
+    "corr.partial.zeroorder": {
+      "placement": "advanced",
+      "tab": "Report",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Zero-order correlations",
+      "sourceKey": "corr.partial.zeroorder",
+      "sourceKind": "checkbox"
+    },
+    "sta.DS": {
+      "placement": "advanced",
+      "tab": "Report",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Descriptive Statistics",
+      "sourceKey": "sta.DS",
+      "sourceKind": "checkbox"
+    },
+    "missing": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Missing values removal",
+      "sourceKey": "sta.missingvalshandling",
+      "sourceKind": "list"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    },
+    "controls": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Covariates (Control)",
+      "sourceKey": "var.controlcovar",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1011": {
+    "sta.bst.ds.ao.0": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Plot histogram",
+      "sourceKey": "sta.bst.ds.ao.0",
+      "sourceKind": "checkbox"
+    },
+    "sta.bst.ds.ao.1": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 1,
+      "sourceLabel": "Overlay histogram with normal curve",
+      "sourceKey": "sta.bst.ds.ao.1",
+      "sourceKind": "checkbox",
+      "parent": "sta.bst.ds.ao.0",
+      "parentInverse": false
+    },
+    "sta.bst.ds.ao.2": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 2,
+      "sourceLabel": "Number of intervals [NI>2 or 0 for auto]",
+      "sourceKey": "sta.bst.ds.ao.2",
+      "sourceKind": "numberint",
+      "validator": "0,3-",
+      "parent": "sta.bst.ds.ao.0",
+      "parentInverse": false
+    },
+    "sta.chart.qq": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Q-Q Plot",
+      "sourceKey": "sta.chart.qq",
+      "sourceKind": "checkbox"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1012": {
+    "tables.plot.bar": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Bar chart",
+      "sourceKey": "tables.plot.bar",
+      "sourceKind": "list"
+    },
+    "output.percenstyleforpercentages": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Use percent-style cell format for percentages",
+      "sourceKey": "output.percenstyleforpercentages",
+      "sourceKind": "checkbox"
+    },
+    "order": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Row order",
+      "sourceKey": "tables.order.row",
+      "sourceKind": "list"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Categorical Variables",
+      "sourceKey": "sta.bst.freq.discrvar",
+      "sourceKind": "VarRangeText"
+    },
+    "sta.bst.freq.freqvar": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Frequency (Count) Variable",
+      "sourceKey": "sta.bst.freq.freqvar",
+      "sourceKind": "VarRange"
+    },
+    "sta.bst.freq.layervar": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Break Variable",
+      "sourceKey": "sta.bst.freq.layervar",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "1013": {
+    "bins": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Number of intervals [NI>2 or 0 for auto]",
+      "sourceKey": "sta.bst.ds.ao.2",
+      "sourceKind": "numberint"
+    },
+    "sta.bst.freq.minval2": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 1,
+      "sourceLabel": "Start value [leave empty for auto]",
+      "sourceKey": "sta.bst.freq.minval2",
+      "sourceKind": "string"
+    },
+    "sta.bst.freq.width2": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 2,
+      "sourceLabel": "Interval width [leave empty for auto]",
+      "sourceKey": "sta.bst.freq.width2",
+      "sourceKind": "string"
+    },
+    "sta.bst.ds.hist.bins0": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Hide empty bins",
+      "sourceKey": "sta.bst.ds.hist.bins0",
+      "sourceKind": "checkbox"
+    },
+    "closed": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Bin intervals",
+      "sourceKey": "sta.bst.hist.intervalsopen",
+      "sourceKind": "list"
+    },
+    "sta.bst.ds.ao.0": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Plot histogram",
+      "sourceKey": "sta.bst.ds.ao.0",
+      "sourceKind": "checkbox"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Continuous Variables",
+      "sourceKey": "sta.bst.freq.contvar",
+      "sourceKind": "VarRange"
+    },
+    "sta.bst.freq.freqvar": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Frequency (Count) Variable",
+      "sourceKey": "sta.bst.freq.freqvar",
+      "sourceKind": "VarRange"
+    },
+    "sta.bst.freq.layervar": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Break Variable",
+      "sourceKey": "sta.bst.freq.layervar",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "1014": {
+    "sta.chi.table_combined": {
+      "placement": "advanced",
+      "tab": "Tables",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Crosstab table",
+      "sourceKey": "sta.chi.table_combined",
+      "sourceKind": "list"
+    },
+    "sta.chi.exp_freq": {
+      "placement": "advanced",
+      "tab": "Tables",
+      "indent": true,
+      "order": 1,
+      "sourceLabel": "Expected frequencies",
+      "sourceKey": "sta.chi.exp_freq",
+      "sourceKind": "checkbox"
+    },
+    "tables.ui.tables.percentage": {
+      "placement": "advanced",
+      "tab": "Tables",
+      "indent": true,
+      "order": 2,
+      "sourceLabel": "Percentages (marginal and total)",
+      "sourceKey": "tables.ui.tables.percentage",
+      "sourceKind": "checkbox"
+    },
+    "tables.ui.tables.residuals": {
+      "placement": "advanced",
+      "tab": "Tables",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Residuals and chi-square contribution",
+      "sourceKey": "tables.ui.tables.residuals",
+      "sourceKind": "checkbox"
+    },
+    "sta.nps.chi.tests": {
+      "placement": "advanced",
+      "tab": "Statistics",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Chi-square tests",
+      "sourceKey": "sta.nps.chi.tests",
+      "sourceKind": "checkbox"
+    },
+    "tables.measures": {
+      "placement": "advanced",
+      "tab": "Statistics",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Measures of association",
+      "sourceKey": "tables.measures",
+      "sourceKind": "checkbox"
+    },
+    "tables.ui.kappaopt": {
+      "placement": "advanced",
+      "tab": "Statistics",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Kappa (K x K)",
+      "sourceKey": "tables.ui.kappaopt",
+      "sourceKind": "checkbox"
+    },
+    "tables.ui.full2x2": {
+      "placement": "advanced",
+      "tab": "Statistics",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Tests and measures for 2 x 2 tables",
+      "sourceKey": "tables.ui.full2x2",
+      "sourceKind": "checkbox"
+    },
+    "tables.plot.bar": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 8,
+      "sourceLabel": "Bar chart",
+      "sourceKey": "tables.plot.bar",
+      "sourceKind": "list"
+    },
+    "tables.plot.interaction": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 9,
+      "sourceLabel": "Interaction plot",
+      "sourceKey": "tables.plot.interaction",
+      "sourceKind": "checkbox"
+    },
+    "output.percenstyleforpercentages": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 10,
+      "sourceLabel": "Use percent-style cell format for percentages",
+      "sourceKey": "output.percenstyleforpercentages",
+      "sourceKind": "checkbox"
+    },
+    "tables.freq.nonint": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 11,
+      "sourceLabel": "Non-integer frequencies",
+      "sourceKey": "tables.freq.nonint",
+      "sourceKind": "list"
+    },
+    "tables.order.row": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 12,
+      "sourceLabel": "Row order",
+      "sourceKey": "tables.order.row",
+      "sourceKind": "list"
+    },
+    "tables.order.column": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 13,
+      "sourceLabel": "Column order",
+      "sourceKey": "tables.order.column",
+      "sourceKind": "list"
+    },
+    "row": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Row Variable",
+      "sourceKey": "sta.nps.chi.row_var",
+      "sourceKind": "VarRangeText"
+    },
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Column Variable",
+      "sourceKey": "sta.nps.chi.col_var",
+      "sourceKind": "VarRangeText"
+    },
+    "sta.bst.freq.freqvar": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Frequency (Count) Variable",
+      "sourceKey": "sta.bst.freq.freqvar",
+      "sourceKind": "VarRange"
+    },
+    "sta.bst.freq.layervar": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Break Variable",
+      "sourceKey": "sta.bst.freq.layervar",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "1015": {
+    "sta.bst.pareto": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Pareto (sorted histogram)",
+      "sourceKey": "sta.bst.pareto",
+      "sourceKind": "checkbox"
+    },
+    "sta.bst.ds.hist.bins0": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Hide empty bins",
+      "sourceKey": "sta.bst.ds.hist.bins0",
+      "sourceKind": "checkbox"
+    },
+    "closed": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Bin intervals",
+      "sourceKey": "sta.bst.hist.intervalsopen",
+      "sourceKind": "list"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Continuous Variables",
+      "sourceKey": "sta.bst.freq.contvar",
+      "sourceKind": "VarRange"
+    },
+    "sta.bst.freq.bins_var": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Bin Range",
+      "sourceKey": "sta.bst.freq.bins_var",
+      "sourceKind": "VarRange"
+    },
+    "sta.bst.freq.freqvar": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Frequency (Count) Variable",
+      "sourceKey": "sta.bst.freq.freqvar",
+      "sourceKind": "VarRange"
+    },
+    "sta.bst.freq.layervar": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Break Variable",
+      "sourceKey": "sta.bst.freq.layervar",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "1102": {
+    "sta.show.DS": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Show descriptive statistics",
+      "sourceKey": "sta.show.DS",
+      "sourceKind": "checkbox"
+    },
+    "means.ci.vartype.ui": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 1,
+      "sourceLabel": "Mean confidence intervals based on",
+      "sourceKey": "means.ci.vartype.ui",
+      "sourceKind": "list",
+      "parent": "sta.show.DS",
+      "parentInverse": false
+    },
+    "anova.plot.meanci_intervals.ui": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 2,
+      "sourceLabel": "Plot means and confidence intervals",
+      "sourceKey": "anova.plot.meanci_intervals.ui",
+      "sourceKind": "checkbox",
+      "parent": "sta.show.DS",
+      "parentInverse": false
+    },
+    "sta.anova.showcontrasts": {
+      "placement": "advanced",
+      "tab": "Post-hoc comparisons",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Post-hoc comparisons",
+      "sourceKey": "sta.anova.showcontrasts",
+      "sourceKind": "checkbox"
+    },
+    "sta.anova.mc.dunnettcontrolgroup": {
+      "placement": "advanced",
+      "tab": "Post-hoc comparisons",
+      "indent": true,
+      "order": 4,
+      "sourceLabel": "Dunnett's test: Control group name",
+      "sourceKey": "sta.anova.mc.dunnettcontrolgroup",
+      "sourceKind": "string",
+      "fill": "V.1.LEVELS",
+      "parent": "sta.anova.showcontrasts",
+      "parentInverse": false
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1103": {
+    "sta.show.DS": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Show descriptive statistics",
+      "sourceKey": "sta.show.DS",
+      "sourceKind": "checkbox"
+    },
+    "means.ci.vartype.ui": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 1,
+      "sourceLabel": "Mean confidence intervals based on",
+      "sourceKey": "means.ci.vartype.ui",
+      "sourceKind": "list",
+      "parent": "sta.show.DS",
+      "parentInverse": false
+    },
+    "anova.plot.meanci_intervals.ui": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 2,
+      "sourceLabel": "Plot means and confidence intervals",
+      "sourceKey": "anova.plot.meanci_intervals.ui",
+      "sourceKind": "checkbox",
+      "parent": "sta.show.DS",
+      "parentInverse": false
+    },
+    "sta.anova.showcontrasts": {
+      "placement": "advanced",
+      "tab": "Post-hoc comparisons",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Post-hoc comparisons",
+      "sourceKey": "sta.anova.showcontrasts",
+      "sourceKind": "checkbox"
+    },
+    "sta.anova.mc.dunnettcontrolgroup": {
+      "placement": "advanced",
+      "tab": "Post-hoc comparisons",
+      "indent": true,
+      "order": 4,
+      "sourceLabel": "Dunnett's test: Control group name",
+      "sourceKey": "sta.anova.mc.dunnettcontrolgroup",
+      "sourceKind": "string",
+      "parent": "sta.anova.showcontrasts",
+      "parentInverse": false
+    },
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Response",
+      "sourceKey": "ANOVA_RESPONSE",
+      "sourceKind": "VarRange"
+    },
+    "group": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Factor",
+      "sourceKey": "ANOVA_FACTOR",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "1104": {
+    "factor_type_1": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Factor #1",
+      "sourceKey": "ANOVA_FACTOR.1",
+      "sourceKind": "list"
+    },
+    "factor_type_2": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Factor #2",
+      "sourceKey": "ANOVA_FACTOR.2",
+      "sourceKind": "list"
+    },
+    "sta.anova.ao_nointer": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "No Interactions / Randomized Block Design",
+      "sourceKey": "sta.anova.ao_nointer",
+      "sourceKind": "checkbox"
+    },
+    "sta.anova.showcontrasts": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Post-hoc comparisons",
+      "sourceKey": "sta.anova.showcontrasts",
+      "sourceKind": "checkbox"
+    },
+    "sta.show.DS": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Show descriptive statistics",
+      "sourceKey": "sta.show.DS",
+      "sourceKind": "checkbox"
+    },
+    "response": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Response",
+      "sourceKey": "ANOVA_RESPONSE",
+      "sourceKind": "VarRange"
+    },
+    "factor_1": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Factor #1",
+      "sourceKey": "ANOVA_FACTOR.1",
+      "sourceKind": "VarRangeText"
+    },
+    "factor_2": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Factor #2",
+      "sourceKey": "ANOVA_FACTOR.2",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "1105": {
+    "factor_type_1": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Factor #1",
+      "sourceKey": "ANOVA_FACTOR.1",
+      "sourceKind": "list"
+    },
+    "factor_type_2": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Factor #2",
+      "sourceKey": "ANOVA_FACTOR.2",
+      "sourceKind": "list"
+    },
+    "factor_type_3": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Factor #3",
+      "sourceKey": "ANOVA_FACTOR.3",
+      "sourceKind": "list"
+    },
+    "sta.anova.showcontrasts": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Post-hoc comparisons",
+      "sourceKey": "sta.anova.showcontrasts",
+      "sourceKind": "checkbox"
+    },
+    "sta.show.DS": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Show descriptive statistics",
+      "sourceKey": "sta.show.DS",
+      "sourceKind": "checkbox"
+    },
+    "response": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Response",
+      "sourceKey": "ANOVA_RESPONSE",
+      "sourceKind": "VarRange"
+    },
+    "factor_1": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Factor #1",
+      "sourceKey": "ANOVA_FACTOR.1",
+      "sourceKind": "VarRangeText"
+    },
+    "factor_2": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Factor #2",
+      "sourceKey": "ANOVA_FACTOR.2",
+      "sourceKind": "VarRangeText"
+    },
+    "factor_3": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Factor #3",
+      "sourceKey": "ANOVA_FACTOR.3",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "1108": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Repeated Measures",
+      "sourceKey": "sta.anova.rep_mes",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1106": {
+    "group": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Groups",
+      "sourceKey": "GROUPS",
+      "sourceKind": "VarRange"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Repeated Measures",
+      "sourceKey": "sta.anova.rep_mes",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1107": {
+    "factor_a": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Factor #A",
+      "sourceKey": "ANOVA_FACTOR.A",
+      "sourceKind": "VarRange"
+    },
+    "factor_b": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Factor #B",
+      "sourceKey": "ANOVA_FACTOR.B",
+      "sourceKind": "VarRange"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Repeated Measures",
+      "sourceKey": "sta.anova.rep_mes",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1109": {
+    "glm.coding": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Coding Type",
+      "sourceKey": "glm.coding",
+      "sourceKind": "list"
+    },
+    "glm.showcorrs": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Show correlations",
+      "sourceKey": "glm.showcorrs",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.show_iter": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Show Iterations",
+      "sourceKey": "sta.reg.show_iter",
+      "sourceKind": "checkbox"
+    },
+    "responses": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Response [Continuous]",
+      "sourceKey": "sta.glm.param.0",
+      "sourceKind": "VarRange"
+    },
+    "factors": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Factors [Fixed]",
+      "sourceKey": "sta.glm.param.3",
+      "sourceKind": "VarRange"
+    },
+    "random_factors": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Factors [Random]",
+      "sourceKey": "sta.glm.param.4",
+      "sourceKind": "VarRange"
+    },
+    "predictors": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Covariates",
+      "sourceKey": "sta.glm.param.5",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1201": {
+    "response": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Dependent variable",
+      "sourceKey": "sta.depvar",
+      "sourceKind": "VarRange"
+    },
+    "a": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Code For Factor A",
+      "sourceKey": "sta.latsq.factor_c.a",
+      "sourceKind": "VarRange"
+    },
+    "b": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Code For Factor B",
+      "sourceKey": "sta.latsq.factor_c.b",
+      "sourceKind": "VarRange"
+    },
+    "c": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Code For Factor C",
+      "sourceKey": "sta.latsq.factor_c.c",
+      "sourceKind": "VarRange"
+    },
+    "cases_per_cell": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Number of cases per cell",
+      "sourceKey": "sta.latsq.cases_pc",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "1202": {
+    "response": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Dependent variable",
+      "sourceKey": "sta.depvar",
+      "sourceKind": "VarRange"
+    },
+    "a": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Code For Factor A",
+      "sourceKey": "sta.latsq.factor_c.a",
+      "sourceKind": "VarRange"
+    },
+    "b": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Code For Factor B",
+      "sourceKey": "sta.latsq.factor_c.b",
+      "sourceKind": "VarRange"
+    },
+    "c": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Code For Factor C",
+      "sourceKey": "sta.latsq.factor_c.c",
+      "sourceKind": "VarRange"
+    },
+    "d": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Code For Factor D",
+      "sourceKey": "sta.latsq.factor_c.d",
+      "sourceKind": "VarRange"
+    },
+    "cases_per_cell": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Number of cases per cell",
+      "sourceKey": "sta.latsq.cases_pc",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "1203": {
+    "response": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Dependent variable",
+      "sourceKey": "sta.depvar",
+      "sourceKind": "VarRange"
+    },
+    "a": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Code For Factor A",
+      "sourceKey": "sta.latsq.factor_c.a",
+      "sourceKind": "VarRange"
+    },
+    "b": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Code For Factor B",
+      "sourceKey": "sta.latsq.factor_c.b",
+      "sourceKind": "VarRange"
+    },
+    "c": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Code For Factor C",
+      "sourceKey": "sta.latsq.factor_c.c",
+      "sourceKind": "VarRange"
+    },
+    "d": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Code For Factor D",
+      "sourceKey": "sta.latsq.factor_c.d",
+      "sourceKind": "VarRange"
+    },
+    "cases_per_cell": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Number of cases per cell",
+      "sourceKey": "sta.latsq.cases_pc",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "1204": {
+    "response": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Dependent variable",
+      "sourceKey": "sta.depvar",
+      "sourceKind": "VarRange"
+    },
+    "a": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Code For Factor A",
+      "sourceKey": "sta.latsq.factor_c.a",
+      "sourceKind": "VarRange"
+    },
+    "b": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Code For Factor B",
+      "sourceKey": "sta.latsq.factor_c.b",
+      "sourceKind": "VarRange"
+    },
+    "c": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Latin Square",
+      "sourceKey": "sta.anova.lsq.lsq",
+      "sourceKind": "VarRange"
+    },
+    "d": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Greek Square",
+      "sourceKey": "sta.anova.gsq.gsq",
+      "sourceKind": "VarRange"
+    },
+    "cases_per_cell": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Number of cases per cell",
+      "sourceKey": "sta.latsq.cases_pc",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "1205": {
+    "response": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Dependent variable",
+      "sourceKey": "sta.depvar",
+      "sourceKind": "VarRange"
+    },
+    "a": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Code For Factor A",
+      "sourceKey": "sta.latsq.factor_c.a",
+      "sourceKind": "VarRange"
+    },
+    "b": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Code For Factor B",
+      "sourceKey": "sta.latsq.factor_c.b",
+      "sourceKind": "VarRange"
+    },
+    "subject": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Code For Factor C",
+      "sourceKey": "sta.latsq.factor_c.c",
+      "sourceKind": "VarRange"
+    },
+    "group": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Group Code",
+      "sourceKey": "sta.group_c",
+      "sourceKind": "VarRange"
+    },
+    "cases_per_cell": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Number of cases per cell",
+      "sourceKey": "sta.latsq.cases_pc",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "1206": {
+    "response": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Dependent variable",
+      "sourceKey": "sta.depvar",
+      "sourceKind": "VarRange"
+    },
+    "a": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Code For Factor A",
+      "sourceKey": "sta.latsq.factor_c.a",
+      "sourceKind": "VarRange"
+    },
+    "b": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Code For Factor B",
+      "sourceKey": "sta.latsq.factor_c.b",
+      "sourceKind": "VarRange"
+    },
+    "subject": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Code For Factor C",
+      "sourceKey": "sta.latsq.factor_c.c",
+      "sourceKind": "VarRange"
+    },
+    "group": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Group Code",
+      "sourceKey": "sta.group_c",
+      "sourceKind": "VarRange"
+    },
+    "cases_per_cell": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Number of cases per cell",
+      "sourceKey": "sta.latsq.cases_pc",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "1207": {
+    "response": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Dependent variable",
+      "sourceKey": "sta.depvar",
+      "sourceKind": "VarRange"
+    },
+    "a": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Code For Factor A",
+      "sourceKey": "sta.latsq.factor_c.a",
+      "sourceKind": "VarRange"
+    },
+    "b": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Code For Factor B",
+      "sourceKey": "sta.latsq.factor_c.b",
+      "sourceKind": "VarRange"
+    },
+    "c": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Code For Factor C",
+      "sourceKey": "sta.latsq.factor_c.c",
+      "sourceKind": "VarRange"
+    },
+    "subject": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Code For Factor D",
+      "sourceKey": "sta.latsq.factor_c.d",
+      "sourceKind": "VarRange"
+    },
+    "group": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Group Code",
+      "sourceKey": "sta.group_c",
+      "sourceKind": "VarRange"
+    },
+    "cases_per_cell": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Number of cases per cell",
+      "sourceKey": "sta.latsq.cases_pc",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "1208": {
+    "response": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Dependent variable",
+      "sourceKey": "sta.depvar",
+      "sourceKind": "VarRange"
+    },
+    "a": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Code For Factor A",
+      "sourceKey": "sta.latsq.factor_c.a",
+      "sourceKind": "VarRange"
+    },
+    "b": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Code For Factor B",
+      "sourceKey": "sta.latsq.factor_c.b",
+      "sourceKind": "VarRange"
+    },
+    "c": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Code For Factor C",
+      "sourceKey": "sta.latsq.factor_c.c",
+      "sourceKind": "VarRange"
+    },
+    "subject": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Subject",
+      "sourceKey": "sta.subject",
+      "sourceKind": "VarRange"
+    },
+    "group": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Group Code",
+      "sourceKey": "sta.group_c",
+      "sourceKind": "VarRange"
+    },
+    "cases_per_cell": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Number of cases per cell",
+      "sourceKey": "sta.latsq.cases_pc",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "1110": {
+    "priors": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "A priori classification probabilities",
+      "sourceKey": "sta.anova.manovads.adv.classif",
+      "sourceKind": "list"
+    },
+    "sta.DS": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Descriptive Statistics",
+      "sourceKey": "sta.DS",
+      "sourceKind": "checkbox"
+    },
+    "mv.var_covar.mxs": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Variance-Covariance Matrices",
+      "sourceKey": "mv.var_covar.mxs",
+      "sourceKind": "checkbox"
+    },
+    "sta.class.casewiseopt": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Casewise Statistics",
+      "sourceKey": "sta.class.casewiseopt",
+      "sourceKind": "checkbox"
+    },
+    "sta.class.missclass.opt": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 4,
+      "sourceLabel": "Only Misclassified Observations",
+      "sourceKey": "sta.class.missclass.opt",
+      "sourceKind": "checkbox",
+      "parent": "sta.class.casewiseopt",
+      "parentInverse": false
+    },
+    "sta.mv.scree-varexplained": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Scree Plot and Variance-Explained Plot",
+      "sourceKey": "sta.mv.scree-varexplained",
+      "sourceKind": "checkbox"
+    },
+    "mv.biplot.ui.opt": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Canonical Plot (first two canonical variables)",
+      "sourceKey": "mv.biplot.ui.opt",
+      "sourceKind": "checkbox"
+    },
+    "group": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Groups",
+      "sourceKey": "GROUPS",
+      "sourceKind": "VarRangeText"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Independent variables",
+      "sourceKey": "sta.indvar",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1120": {
+    "matrix": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Perform PCA on",
+      "sourceKey": "sta.mv.pca.type",
+      "sourceKind": "list"
+    },
+    "sta.mv.pca.pcprefix": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Prefix for naming the principal components",
+      "sourceKey": "sta.mv.pca.pcprefix",
+      "sourceKind": "string"
+    },
+    "sta.mv.scree": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Scree plot",
+      "sourceKey": "sta.mv.scree",
+      "sourceKind": "checkbox"
+    },
+    "sta.mv.varexplained.plot": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Plot variance explained",
+      "sourceKey": "sta.mv.varexplained.plot",
+      "sourceKind": "checkbox"
+    },
+    "sta.mv.pca.compload.plot": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Plot loadings",
+      "sourceKey": "sta.mv.pca.compload.plot",
+      "sourceKind": "checkbox"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1121": {
+    "sta.method": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Method",
+      "sourceKey": "sta.method",
+      "sourceKind": "list"
+    },
+    "matrix": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Perform PCA on",
+      "sourceKey": "sta.mv.pca.type",
+      "sourceKind": "list"
+    },
+    "retention": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Factor retention criterium",
+      "sourceKey": "sta.mv.fa.reten",
+      "sourceKind": "list"
+    },
+    "threshold": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 3,
+      "sourceLabel": "X",
+      "sourceKey": "X",
+      "sourceKind": "number"
+    },
+    "sta.fa.rot.type": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Rotation",
+      "sourceKey": "sta.fa.rot.type",
+      "sourceKind": "list"
+    },
+    "gamma": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 5,
+      "sourceLabel": "Orthomax: Gamma",
+      "sourceKey": "sta.mv.pca.orthogamma",
+      "sourceKind": "number"
+    },
+    "sta.mv.scree": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Scree plot",
+      "sourceKey": "sta.mv.scree",
+      "sourceKind": "checkbox"
+    },
+    "sta.mv.varexplained.plot": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Plot variance explained",
+      "sourceKey": "sta.mv.varexplained.plot",
+      "sourceKind": "checkbox"
+    },
+    "sta.mv.pca.compload.plot": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 8,
+      "sourceLabel": "Plot loadings",
+      "sourceKey": "sta.mv.pca.compload.plot",
+      "sourceKind": "list"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1130": {
+    "clusters": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Number of clusters",
+      "sourceKey": "mv.noc",
+      "sourceKind": "numberint"
+    },
+    "max_iter": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Maximum number of iterations",
+      "sourceKey": "sta.reg.max_iter",
+      "sourceKind": "numberint",
+      "validator": "1-1000"
+    },
+    "sta.DS": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Descriptive Statistics",
+      "sourceKey": "sta.DS",
+      "sourceKind": "checkbox"
+    },
+    "mv.km.initcenters": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Initial cluster centers",
+      "sourceKey": "mv.km.initcenters",
+      "sourceKind": "checkbox"
+    },
+    "mv.mk.iterations_change": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Change in cluster centers at each iteration",
+      "sourceKey": "mv.mk.iterations_change",
+      "sourceKind": "checkbox"
+    },
+    "mv.km.summary": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Cluster summary",
+      "sourceKey": "mv.km.summary",
+      "sourceKind": "checkbox"
+    },
+    "mv.km.membership_distance": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Cluster membership and distance",
+      "sourceKey": "mv.km.membership_distance",
+      "sourceKind": "checkbox"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    },
+    "sta.in.caselabels": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Case labels",
+      "sourceKey": "sta.in.caselabels",
+      "sourceKind": "VarRangeText"
+    },
+    "initial_centers": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Initial cluster centers",
+      "sourceKey": "mv.km.initcenters",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1132": {
+    "cluster_axis": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Cluster",
+      "sourceKey": "cluster.opt",
+      "sourceKind": "list"
+    },
+    "cluster.linkage": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Linkage method",
+      "sourceKey": "cluster.linkage",
+      "sourceKind": "list"
+    },
+    "cluster.linkage.flex.beta": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 2,
+      "sourceLabel": "Flexible: Beta",
+      "sourceKey": "cluster.linkage.flex.beta",
+      "sourceKind": "number"
+    },
+    "mv.distancemeasure": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Distance measure",
+      "sourceKey": "mv.distancemeasure",
+      "sourceKind": "list"
+    },
+    "mv.distance.generalized.opt.power": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 4,
+      "sourceLabel": "Power (for Generalized, Minkowski)",
+      "sourceKey": "mv.distance.generalized.opt.power",
+      "sourceKind": "numberint"
+    },
+    "mv.distance.generalized.opt.root": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 5,
+      "sourceLabel": "Root (for Generalized)",
+      "sourceKey": "mv.distance.generalized.opt.root",
+      "sourceKind": "numberint"
+    },
+    "cluster.node.stats": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Node statistics",
+      "sourceKey": "cluster.node.stats",
+      "sourceKind": "checkbox"
+    },
+    "cluster.proximity": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Proximity matrix",
+      "sourceKey": "cluster.proximity",
+      "sourceKind": "checkbox"
+    },
+    "cluster.membership": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 8,
+      "sourceLabel": "Cluster membership",
+      "sourceKey": "cluster.membership",
+      "sourceKind": "checkbox"
+    },
+    "mv.noc.opt.singleorrange": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": true,
+      "order": 9,
+      "sourceLabel": "Number of clusters (single \"2\" or range \"3-5\")",
+      "sourceKey": "mv.noc.opt.singleorrange",
+      "sourceKind": "string",
+      "parent": "cluster.membership",
+      "parentInverse": false
+    },
+    "cluster.dendrogram": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 10,
+      "sourceLabel": "Dendrogram",
+      "sourceKey": "cluster.dendrogram",
+      "sourceKind": "checkbox"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    },
+    "sta.in.caselabels": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Case labels",
+      "sourceKey": "sta.in.caselabels",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "1301": {
+    "sta.reg.nointercept": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "No intercept model",
+      "sourceKey": "sta.reg.nointercept",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.ao.residuals": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Report residuals",
+      "sourceKey": "sta.reg.ao.residuals",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.stdres.emulateexcel": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 2,
+      "sourceLabel": "Emulate Excel ATP for standard residuals",
+      "sourceKey": "sta.reg.stdres.emulateexcel",
+      "sourceKind": "checkbox",
+      "parent": "sta.reg.ao.residuals",
+      "parentInverse": false
+    },
+    "sta.reg.lin.ao.res.ht-tests": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 3,
+      "sourceLabel": "Run tests for heteroscedasticity",
+      "sourceKey": "sta.reg.lin.ao.res.ht-tests",
+      "sourceKind": "checkbox",
+      "parent": "sta.reg.ao.residuals",
+      "parentInverse": false
+    },
+    "sta.reg.lin.ao.norm-qq-hist": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 4,
+      "sourceLabel": "Run tests for normality (display Q-Q plot and histogram)",
+      "sourceKey": "sta.reg.lin.ao.norm-qq-hist",
+      "sourceKind": "checkbox",
+      "parent": "sta.reg.ao.residuals",
+      "parentInverse": false
+    },
+    "sta.reg.lin.ao.1": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Plot line fit (univariate only)",
+      "sourceKey": "sta.reg.lin.ao.1",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.lin.ao.0": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Plot residuals vs. fitted",
+      "sourceKey": "sta.reg.lin.ao.0",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.lin.ao.indep": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Plot residuals vs. predictors",
+      "sourceKey": "sta.reg.lin.ao.indep",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.lin.ao.resorder": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 8,
+      "sourceLabel": "Plot residuals vs. order",
+      "sourceKey": "sta.reg.lin.ao.resorder",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.plot.resid.type": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 9,
+      "sourceLabel": "Residuals plotted",
+      "sourceKey": "sta.reg.plot.resid.type",
+      "sourceKind": "list"
+    },
+    "sta.reg.coldiag": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 10,
+      "sourceLabel": "Collinearity diagnostics",
+      "sourceKey": "sta.reg.coldiag",
+      "sourceKind": "checkbox"
+    },
+    "response": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Dependent variable",
+      "sourceKey": "sta.depvar",
+      "sourceKind": "VarRange"
+    },
+    "predictors": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Independent variables",
+      "sourceKey": "sta.indvar",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1303": {
+    "degree": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Degree of polynomial",
+      "sourceKey": "sta.reg.pol.order",
+      "sourceKind": "numberint",
+      "validator": "2-100"
+    },
+    "sta.reg.ao.plot.linefit": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Plot line fit",
+      "sourceKey": "sta.reg.ao.plot.linefit",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.lin.ao.0": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Plot residuals vs. fitted",
+      "sourceKey": "sta.reg.lin.ao.0",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.lin.ao.resorder": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Plot residuals vs. order",
+      "sourceKey": "sta.reg.lin.ao.resorder",
+      "sourceKind": "checkbox"
+    },
+    "response": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Dependent variable",
+      "sourceKey": "sta.depvar",
+      "sourceKind": "VarRange"
+    },
+    "predictor": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Independent variable",
+      "sourceKey": "sta.indvar.2",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1310": {
+    "sta.reg.model.inv": {
+      "placement": "advanced",
+      "tab": "Models I",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Inverse",
+      "sourceKey": "sta.reg.model.inv",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.model.ln": {
+      "placement": "advanced",
+      "tab": "Models I",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Logarithmic",
+      "sourceKey": "sta.reg.model.ln",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.model.lin": {
+      "placement": "advanced",
+      "tab": "Models I",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Linear",
+      "sourceKey": "sta.reg.model.lin",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.model.quad": {
+      "placement": "advanced",
+      "tab": "Models I",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Quadratic",
+      "sourceKey": "sta.reg.model.quad",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.model.cub": {
+      "placement": "advanced",
+      "tab": "Models I",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Cubic",
+      "sourceKey": "sta.reg.model.cub",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.model.pow": {
+      "placement": "advanced",
+      "tab": "Models I",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Power",
+      "sourceKey": "sta.reg.model.pow",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.model.com": {
+      "placement": "advanced",
+      "tab": "Models II",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Compound",
+      "sourceKey": "sta.reg.model.com",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.model.scurve": {
+      "placement": "advanced",
+      "tab": "Models II",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Sigmoid (S-curve)",
+      "sourceKey": "sta.reg.model.scurve",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.model.logistic": {
+      "placement": "advanced",
+      "tab": "Models II",
+      "indent": false,
+      "order": 8,
+      "sourceLabel": "Logistic",
+      "sourceKey": "sta.reg.model.logistic",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.model.logistic.ub": {
+      "placement": "advanced",
+      "tab": "Models II",
+      "indent": true,
+      "order": 9,
+      "sourceLabel": "Upper bound",
+      "sourceKey": "sta.reg.model.logistic.ub",
+      "sourceKind": "number",
+      "parent": "sta.reg.model.logistic",
+      "parentInverse": false
+    },
+    "sta.reg.model.grow": {
+      "placement": "advanced",
+      "tab": "Models II",
+      "indent": false,
+      "order": 10,
+      "sourceLabel": "Growth",
+      "sourceKey": "sta.reg.model.grow",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.model.exp": {
+      "placement": "advanced",
+      "tab": "Models II",
+      "indent": false,
+      "order": 11,
+      "sourceLabel": "Exponential",
+      "sourceKey": "sta.reg.model.exp",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.nointercept": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 12,
+      "sourceLabel": "No intercept model",
+      "sourceKey": "sta.reg.nointercept",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.lin.ao.plotfit": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 13,
+      "sourceLabel": "Fitted model plots",
+      "sourceKey": "sta.reg.lin.ao.plotfit",
+      "sourceKind": "list"
+    },
+    "sta.reg.modelsum": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 14,
+      "sourceLabel": "Model summary",
+      "sourceKey": "sta.reg.modelsum",
+      "sourceKind": "list"
+    },
+    "response": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Dependent variable",
+      "sourceKey": "sta.depvar",
+      "sourceKind": "VarRange"
+    },
+    "predictor": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Independent variable",
+      "sourceKey": "sta.indvar.2",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1302": {
+    "sta.reg.nointercept": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "No intercept model",
+      "sourceKey": "sta.reg.nointercept",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.wpower": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "W^Exponent (raise weights to power)",
+      "sourceKey": "sta.reg.wpower",
+      "sourceKind": "number"
+    },
+    "sta.reg.lin.ao.0": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Plot residuals vs. fitted",
+      "sourceKey": "sta.reg.lin.ao.0",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.lin.ao.resorder": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Plot residuals vs. order",
+      "sourceKey": "sta.reg.lin.ao.resorder",
+      "sourceKind": "checkbox"
+    },
+    "response": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Dependent variable",
+      "sourceKey": "sta.depvar",
+      "sourceKind": "VarRange"
+    },
+    "predictors": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Independent variables",
+      "sourceKey": "sta.indvar",
+      "sourceKind": "VarRange"
+    },
+    "weights": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Weight variable",
+      "sourceKey": "sta.reg.w",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1304": {
+    "alpha": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Enter if alpha <",
+      "sourceKey": "sta.reg.sw.adv_par.0",
+      "sourceKind": "number"
+    },
+    "glm.showcorrs": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Show correlations",
+      "sourceKey": "glm.showcorrs",
+      "sourceKind": "checkbox"
+    },
+    "sta.show.DS": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Show descriptive statistics",
+      "sourceKey": "sta.show.DS",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.show_steps": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Show summary for each step",
+      "sourceKey": "sta.reg.show_steps",
+      "sourceKind": "checkbox"
+    },
+    "response": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Dependent variable",
+      "sourceKey": "sta.depvar",
+      "sourceKind": "VarRange"
+    },
+    "predictors": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Independent variables",
+      "sourceKey": "sta.indvar",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1305": {
+    "alpha": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Remove if alpha >",
+      "sourceKey": "sta.reg.sw.adv_par.1",
+      "sourceKind": "number"
+    },
+    "glm.showcorrs": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Show correlations",
+      "sourceKey": "glm.showcorrs",
+      "sourceKind": "checkbox"
+    },
+    "sta.show.DS": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Show descriptive statistics",
+      "sourceKey": "sta.show.DS",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.show_steps": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Show summary for each step",
+      "sourceKey": "sta.reg.show_steps",
+      "sourceKind": "checkbox"
+    },
+    "response": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Dependent variable",
+      "sourceKey": "sta.depvar",
+      "sourceKind": "VarRange"
+    },
+    "predictors": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Independent variables",
+      "sourceKey": "sta.indvar",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1307": {
+    "glm.showcorrs": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Show correlations",
+      "sourceKey": "glm.showcorrs",
+      "sourceKind": "checkbox"
+    },
+    "sta.show.DS": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Show descriptive statistics",
+      "sourceKey": "sta.show.DS",
+      "sourceKind": "checkbox"
+    },
+    "response": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Dependent variable",
+      "sourceKey": "sta.depvar",
+      "sourceKind": "VarRange"
+    },
+    "predictors": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Independent variables",
+      "sourceKey": "sta.indvar",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1306": {
+    "sta.reg.max_iter": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Maximum number of iterations",
+      "sourceKey": "sta.reg.max_iter",
+      "sourceKind": "numberint"
+    },
+    "sta.reg.show_iter": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Show Iterations",
+      "sourceKey": "sta.reg.show_iter",
+      "sourceKind": "checkbox"
+    },
+    "response": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Dependent variable",
+      "sourceKey": "sta.depvar",
+      "sourceKind": "VarRange"
+    },
+    "predictors": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Independent variables",
+      "sourceKey": "sta.indvar",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1309": {
+    "predictors": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Independent variables",
+      "sourceKey": "sta.indvar",
+      "sourceKind": "VarRange"
+    },
+    "time": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Survival time",
+      "sourceKey": "sta.surv.time",
+      "sourceKind": "VarRange"
+    },
+    "status": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Status",
+      "sourceKey": "sta.surv.status",
+      "sourceKind": "VarRangeText"
+    },
+    "sta.surv.code.fail": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Code for failure (event occurred)",
+      "sourceKey": "sta.surv.code.fail",
+      "sourceKind": "string"
+    },
+    "sta.surv.code.censor": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Code for censored",
+      "sourceKey": "sta.surv.code.censor",
+      "sourceKind": "string"
+    },
+    "sta.surv.roc.code.unknown": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Unknown code",
+      "sourceKey": "sta.surv.roc.code.unknown",
+      "sourceKind": "list"
+    }
+  },
+  "1320": {
+    "sta.reg.modelsum.opt": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Display model summary for each test",
+      "sourceKey": "sta.reg.modelsum.opt",
+      "sourceKind": "checkbox"
+    },
+    "reg.bpg": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Breusch-Pagan-Godfrey (BPG) test",
+      "sourceKey": "reg.bpg",
+      "sourceKind": "checkbox"
+    },
+    "reg.harvey": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Harvey test",
+      "sourceKey": "reg.harvey",
+      "sourceKind": "checkbox"
+    },
+    "reg.glejser": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Glejser test",
+      "sourceKey": "reg.glejser",
+      "sourceKind": "checkbox"
+    },
+    "reg.arch": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Engle's ARCH test",
+      "sourceKey": "reg.arch",
+      "sourceKind": "checkbox"
+    },
+    "sta.time.lags_c": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 5,
+      "sourceLabel": "Lags count",
+      "sourceKey": "sta.time.lags_c",
+      "sourceKind": "numberint",
+      "parent": "reg.arch",
+      "parentInverse": false
+    },
+    "reg.white": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "White test",
+      "sourceKey": "reg.white",
+      "sourceKind": "checkbox"
+    },
+    "sta.time.reg.include": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 7,
+      "sourceLabel": "Include terms",
+      "sourceKey": "sta.time.reg.include",
+      "sourceKind": "list",
+      "parent": "reg.white",
+      "parentInverse": false
+    },
+    "residuals": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Residuals",
+      "sourceKey": "sta.var.resid",
+      "sourceKind": "VarRange"
+    },
+    "predictors": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Independent variables",
+      "sourceKey": "sta.indvar",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1403": {
+    "sta.sort.output": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Sort output",
+      "sourceKey": "sta.sort.output",
+      "sourceKind": "list"
+    },
+    "ties": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Ties are assigned to",
+      "sourceKey": "sta.rankperc.tie",
+      "sourceKind": "list"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1404": {
+    "sta.scatterplots": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Scatter plots",
+      "sourceKey": "sta.scatterplots",
+      "sourceKind": "checkbox"
+    },
+    "alternative": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Alternative hypothesis H1",
+      "sourceKey": "sta.h1",
+      "sourceKind": "list"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1405": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1401": {
+    "tables.ui.2x2.expected": {
+      "placement": "advanced",
+      "tab": "Tables",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Crosstab table: Expected frequencies",
+      "sourceKey": "tables.ui.2x2.expected",
+      "sourceKind": "checkbox"
+    },
+    "tables.ui.2x2.percentage": {
+      "placement": "advanced",
+      "tab": "Tables",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Crosstab table: Percentages (marginal and total)",
+      "sourceKey": "tables.ui.2x2.percentage",
+      "sourceKind": "checkbox"
+    },
+    "tables.ui.tables.residuals": {
+      "placement": "advanced",
+      "tab": "Tables",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Residuals and chi-square contribution",
+      "sourceKey": "tables.ui.tables.residuals",
+      "sourceKind": "checkbox"
+    },
+    "sta.nps.mcnemar1": {
+      "placement": "advanced",
+      "tab": "Statistics",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "McNemar Test",
+      "sourceKey": "sta.nps.mcnemar1",
+      "sourceKind": "checkbox"
+    },
+    "T22_FISH": {
+      "placement": "advanced",
+      "tab": "Statistics",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Fisher exact p",
+      "sourceKey": "T22_FISH",
+      "sourceKind": "checkbox"
+    },
+    "sta.nps.kappa": {
+      "placement": "advanced",
+      "tab": "Statistics",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Kappa",
+      "sourceKey": "sta.nps.kappa",
+      "sourceKind": "checkbox"
+    },
+    "tables.measures": {
+      "placement": "advanced",
+      "tab": "Statistics",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Measures of association",
+      "sourceKey": "tables.measures",
+      "sourceKind": "checkbox"
+    },
+    "tables.measures.verification": {
+      "placement": "advanced",
+      "tab": "Statistics",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Measures of accuracy",
+      "sourceKey": "tables.measures.verification",
+      "sourceKind": "checkbox"
+    },
+    "tables.plot.bar": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 8,
+      "sourceLabel": "Bar chart",
+      "sourceKey": "tables.plot.bar",
+      "sourceKind": "list"
+    },
+    "tables.plot.interaction": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 9,
+      "sourceLabel": "Interaction plot",
+      "sourceKey": "tables.plot.interaction",
+      "sourceKind": "checkbox"
+    },
+    "tables.freq.nonint.2x2": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 10,
+      "sourceLabel": "Non-integer frequencies (A,B,C,D)",
+      "sourceKey": "tables.freq.nonint.2x2",
+      "sourceKind": "list"
+    },
+    "sta.nps.2x2.param.0": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "A + + TP (Positive x Positive, Exposed x Disease)",
+      "sourceKey": "sta.nps.2x2.param.0",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "sta.nps.2x2.param.1": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "B + - FP (Positive x Negative, Exposed x No disease)",
+      "sourceKey": "sta.nps.2x2.param.1",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "sta.nps.2x2.param.2": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "C - + FN (Negative x Positive, Not exposed x Disease)",
+      "sourceKey": "sta.nps.2x2.param.2",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "sta.nps.2x2.param.3": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "D - - TN (Negative x Negative, Not exposed x No disease)",
+      "sourceKey": "sta.nps.2x2.param.3",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "1411": {
+    "sta.chi.table_combined": {
+      "placement": "advanced",
+      "tab": "Tables",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Crosstab table",
+      "sourceKey": "sta.chi.table_combined",
+      "sourceKind": "list"
+    },
+    "sta.chi.exp_freq": {
+      "placement": "advanced",
+      "tab": "Tables",
+      "indent": true,
+      "order": 1,
+      "sourceLabel": "Expected frequencies",
+      "sourceKey": "sta.chi.exp_freq",
+      "sourceKind": "checkbox"
+    },
+    "tables.ui.tables.percentage": {
+      "placement": "advanced",
+      "tab": "Tables",
+      "indent": true,
+      "order": 2,
+      "sourceLabel": "Percentages (marginal and total)",
+      "sourceKey": "tables.ui.tables.percentage",
+      "sourceKind": "checkbox"
+    },
+    "tables.ui.tables.residuals": {
+      "placement": "advanced",
+      "tab": "Tables",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Residuals and chi-square contribution",
+      "sourceKey": "tables.ui.tables.residuals",
+      "sourceKind": "checkbox"
+    },
+    "sta.nps.chi.tests": {
+      "placement": "advanced",
+      "tab": "Statistics",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Chi-square tests",
+      "sourceKey": "sta.nps.chi.tests",
+      "sourceKind": "checkbox"
+    },
+    "tables.measures": {
+      "placement": "advanced",
+      "tab": "Statistics",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Measures of association",
+      "sourceKey": "tables.measures",
+      "sourceKind": "checkbox"
+    },
+    "tables.ui.kappaopt": {
+      "placement": "advanced",
+      "tab": "Statistics",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Kappa (K x K)",
+      "sourceKey": "tables.ui.kappaopt",
+      "sourceKind": "checkbox"
+    },
+    "tables.ui.full2x2": {
+      "placement": "advanced",
+      "tab": "Statistics",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Tests and measures for 2 x 2 tables",
+      "sourceKey": "tables.ui.full2x2",
+      "sourceKind": "checkbox"
+    },
+    "tables.plot.bar": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 8,
+      "sourceLabel": "Bar chart",
+      "sourceKey": "tables.plot.bar",
+      "sourceKind": "list"
+    },
+    "tables.plot.interaction": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 9,
+      "sourceLabel": "Interaction plot",
+      "sourceKey": "tables.plot.interaction",
+      "sourceKind": "checkbox"
+    },
+    "output.percenstyleforpercentages": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 10,
+      "sourceLabel": "Use percent-style cell format for percentages",
+      "sourceKey": "output.percenstyleforpercentages",
+      "sourceKind": "checkbox"
+    },
+    "tables.freq.nonint": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 11,
+      "sourceLabel": "Non-integer frequencies",
+      "sourceKey": "tables.freq.nonint",
+      "sourceKind": "list"
+    },
+    "tables.order.row": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 12,
+      "sourceLabel": "Row order",
+      "sourceKey": "tables.order.row",
+      "sourceKind": "list"
+    },
+    "tables.order.column": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 13,
+      "sourceLabel": "Column order",
+      "sourceKey": "tables.order.column",
+      "sourceKind": "list"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Contingency table",
+      "sourceKey": "tables.cont",
+      "sourceKind": "VarRange"
+    },
+    "tables.rowlabels": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Row labels",
+      "sourceKey": "tables.rowlabels",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "1406": {
+    "x": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable #1",
+      "sourceKey": "SERIES_N(1)",
+      "sourceKind": "VarRange"
+    },
+    "y": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Variable #2",
+      "sourceKey": "SERIES_N(2)",
+      "sourceKind": "VarRange"
+    }
+  },
+  "14063": {
+    "GROUP.1": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Code for Group #1",
+      "sourceKey": "GROUP.1",
+      "sourceKind": "string",
+      "fill": "V.2.LEVELS"
+    },
+    "GROUP.2": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Code for Group #2",
+      "sourceKey": "GROUP.2",
+      "sourceKind": "string",
+      "fill": "V.2.LEVELS"
+    },
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable",
+      "sourceKey": "sta.series",
+      "sourceKind": "VarRange"
+    },
+    "group": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Groups",
+      "sourceKey": "GROUPS",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "1407": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    }
+  },
+  "14072": {
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable",
+      "sourceKey": "sta.series",
+      "sourceKind": "VarRange"
+    },
+    "group": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Groups",
+      "sourceKey": "GROUPS",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "1408": {
+    "x": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable #1",
+      "sourceKey": "SERIES_N(1)",
+      "sourceKind": "VarRange"
+    },
+    "y": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Variable #2",
+      "sourceKey": "SERIES_N(2)",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1409": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    }
+  },
+  "14092": {
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable",
+      "sourceKey": "sta.series",
+      "sourceKind": "VarRange"
+    },
+    "group": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Groups",
+      "sourceKey": "GROUPS",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "1410": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1501": {
+    "sta.time.acf.ao.0": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Plot Autocorrelations (ACF)",
+      "sourceKey": "sta.time.acf.ao.0",
+      "sourceKind": "checkbox"
+    },
+    "sta.time.acf.ao.1": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Plot Partial Correlations (PCF)",
+      "sourceKey": "sta.time.acf.ao.1",
+      "sourceKind": "checkbox"
+    },
+    "sta.time.acf.ao.2": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Remove mean",
+      "sourceKey": "sta.time.acf.ao.2",
+      "sourceKind": "checkbox"
+    },
+    "sta.time.acf.ao.3": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Compute differenced series",
+      "sourceKey": "sta.time.acf.ao.3",
+      "sourceKind": "checkbox"
+    },
+    "sta.time.acf.ao.4": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 4,
+      "sourceLabel": "Differencing lag",
+      "sourceKey": "sta.time.acf.ao.4",
+      "sourceKind": "numberint",
+      "parent": "sta.time.acf.ao.3",
+      "parentInverse": false
+    },
+    "sta.time.acf.ao.5": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 5,
+      "sourceLabel": "Differences of order (repeat N times)",
+      "sourceKey": "sta.time.acf.ao.5",
+      "sourceKind": "numberint",
+      "parent": "sta.time.acf.ao.3",
+      "parentInverse": false
+    },
+    "sta.time.acf.ao.6": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "White noise standard errors",
+      "sourceKey": "sta.time.acf.ao.6",
+      "sourceKind": "checkbox"
+    },
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable",
+      "sourceKey": "sta.series",
+      "sourceKind": "VarRange"
+    },
+    "lags": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Lags count",
+      "sourceKey": "sta.time.lags_c",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "1503": {
+    "before": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Pre-Treatment Observations",
+      "sourceKey": "sta.time.int.pre",
+      "sourceKind": "VarRange"
+    },
+    "after": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Post-Treatment Observations",
+      "sourceKey": "sta.time.int.post",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1530": {
+    "sta.ts.transform.diff.opt": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Apply differencing",
+      "sourceKey": "sta.ts.transform.diff.opt",
+      "sourceKind": "list"
+    },
+    "sta.reg.modelsum.opt": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Display model summary for each test",
+      "sourceKey": "sta.reg.modelsum.opt",
+      "sourceKind": "checkbox"
+    },
+    "sta.plot.series": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Plot series",
+      "sourceKey": "sta.plot.series",
+      "sourceKind": "checkbox"
+    },
+    "sta.time.test.df-adf": {
+      "placement": "advanced",
+      "tab": "DF/ADF",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Augmented Dickey-Fuller/Dickey-Fuller Test",
+      "sourceKey": "sta.time.test.df-adf",
+      "sourceKind": "checkbox"
+    },
+    "sta.time.reg.include__df_adf": {
+      "placement": "advanced",
+      "tab": "DF/ADF",
+      "indent": true,
+      "order": 4,
+      "sourceLabel": "Include terms",
+      "sourceKey": "sta.time.reg.include",
+      "sourceKind": "list",
+      "parent": "sta.time.test.df-adf",
+      "parentInverse": false
+    },
+    "sta.time.adf.lag.selection": {
+      "placement": "advanced",
+      "tab": "DF/ADF",
+      "indent": true,
+      "order": 5,
+      "sourceLabel": "Lag length selection criterion",
+      "sourceKey": "sta.time.adf.lag.selection",
+      "sourceKind": "list",
+      "parent": "sta.time.test.df-adf",
+      "parentInverse": false
+    },
+    "p": {
+      "placement": "advanced",
+      "tab": "DF/ADF",
+      "indent": true,
+      "order": 6,
+      "sourceLabel": "p",
+      "sourceKey": "p",
+      "sourceKind": "numberint",
+      "parent": "sta.time.adf.lag.selection",
+      "parentInverse": false
+    },
+    "sta.time.test.pp": {
+      "placement": "advanced",
+      "tab": "PP",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Phillips-Perron Test",
+      "sourceKey": "sta.time.test.pp",
+      "sourceKind": "checkbox"
+    },
+    "sta.time.reg.include__pp": {
+      "placement": "advanced",
+      "tab": "PP",
+      "indent": true,
+      "order": 8,
+      "sourceLabel": "Include terms",
+      "sourceKey": "sta.time.reg.include",
+      "sourceKind": "list",
+      "parent": "sta.time.test.pp",
+      "parentInverse": false
+    },
+    "sta.time.lag__pp": {
+      "placement": "advanced",
+      "tab": "PP",
+      "indent": true,
+      "order": 9,
+      "sourceLabel": "Lag",
+      "sourceKey": "sta.time.lag",
+      "sourceKind": "list",
+      "parent": "sta.time.test.pp",
+      "parentInverse": false
+    },
+    "sta.time.test.kpss": {
+      "placement": "advanced",
+      "tab": "KPSS",
+      "indent": false,
+      "order": 10,
+      "sourceLabel": "Kwiatkowski-Phillips-Schmidt-Shin Test",
+      "sourceKey": "sta.time.test.kpss",
+      "sourceKind": "checkbox"
+    },
+    "sta.time.reg.include__kpss": {
+      "placement": "advanced",
+      "tab": "KPSS",
+      "indent": true,
+      "order": 11,
+      "sourceLabel": "Include terms",
+      "sourceKey": "sta.time.reg.include",
+      "sourceKind": "list",
+      "parent": "sta.time.test.kpss",
+      "parentInverse": false
+    },
+    "sta.time.lag__kpss": {
+      "placement": "advanced",
+      "tab": "KPSS",
+      "indent": true,
+      "order": 12,
+      "sourceLabel": "Lag",
+      "sourceKey": "sta.time.lag",
+      "sourceKind": "list",
+      "parent": "sta.time.test.kpss",
+      "parentInverse": false
+    },
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable",
+      "sourceKey": "sta.series",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1510": {
+    "sta.time.expsm.ao.1": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Model",
+      "sourceKey": "sta.time.expsm.ao.1",
+      "sourceKind": "list"
+    },
+    "time.decompose.opt.centerma": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Centered moving average (for an even period)",
+      "sourceKey": "time.decompose.opt.centerma",
+      "sourceKind": "checkbox"
+    },
+    "time.decompose.opt.printsi": {
+      "placement": "advanced",
+      "tab": "Report",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Print seasonal indices",
+      "sourceKey": "time.decompose.opt.printsi",
+      "sourceKind": "checkbox"
+    },
+    "time.opt.percentforratios": {
+      "placement": "advanced",
+      "tab": "Report",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Percent format for multiplicative components and ratios",
+      "sourceKey": "time.opt.percentforratios",
+      "sourceKind": "checkbox"
+    },
+    "time.opt.series.original": {
+      "placement": "advanced",
+      "tab": "Plot",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Original series",
+      "sourceKey": "time.opt.series.original",
+      "sourceKind": "checkbox"
+    },
+    "time.opt.trendma": {
+      "placement": "advanced",
+      "tab": "Plot",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Trend component (MA)",
+      "sourceKey": "time.opt.trendma",
+      "sourceKind": "checkbox"
+    },
+    "time.sas": {
+      "placement": "advanced",
+      "tab": "Plot",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Seasonally adjusted series",
+      "sourceKey": "time.sas",
+      "sourceKind": "checkbox"
+    },
+    "time.stc": {
+      "placement": "advanced",
+      "tab": "Plot",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Smoothed trend-cycle component",
+      "sourceKey": "time.stc",
+      "sourceKind": "checkbox"
+    },
+    "time.irregular.comp": {
+      "placement": "advanced",
+      "tab": "Plot",
+      "indent": false,
+      "order": 8,
+      "sourceLabel": "Irregular component",
+      "sourceKey": "time.irregular.comp",
+      "sourceKind": "checkbox"
+    },
+    "time.opt.si": {
+      "placement": "advanced",
+      "tab": "Plot",
+      "indent": false,
+      "order": 9,
+      "sourceLabel": "Seasonal indices",
+      "sourceKey": "time.opt.si",
+      "sourceKind": "list"
+    },
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable",
+      "sourceKey": "sta.series",
+      "sourceKind": "VarRange"
+    },
+    "period": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Seasonal period",
+      "sourceKey": "time.period",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "1502": {
+    "MOVING_AVERAGE": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Moving Average",
+      "sourceKey": "MOVING_AVERAGE",
+      "sourceKind": "list"
+    },
+    "sta.time.sma.length": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 1,
+      "sourceLabel": "Simple MA: Length",
+      "sourceKey": "sta.time.sma.length",
+      "sourceKind": "numberint"
+    },
+    "sta.time.ma.showexcelse": {
+      "placement": "advanced",
+      "tab": "ATP",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Simple MA: Display std.err. estimates (Excel ATP)",
+      "sourceKey": "sta.time.ma.showexcelse",
+      "sourceKind": "checkbox"
+    },
+    "sta.time.ma.se_denom": {
+      "placement": "advanced",
+      "tab": "ATP",
+      "indent": true,
+      "order": 3,
+      "sourceLabel": "Std. err. denominator",
+      "sourceKey": "sta.time.ma.se_denom",
+      "sourceKind": "list",
+      "parent": "sta.time.ma.showexcelse",
+      "parentInverse": false
+    },
+    "sta.charts.plot": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Plot",
+      "sourceKey": "sta.charts.plot",
+      "sourceKind": "list"
+    },
+    "report.residuals.plothistogram": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Plot histogram of residuals",
+      "sourceKey": "report.residuals.plothistogram",
+      "sourceKind": "checkbox"
+    },
+    "report.residuals.plotqq": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Normal Q-Q plot of residuals",
+      "sourceKey": "report.residuals.plotqq",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.lin.ao.resorder": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Plot residuals vs. order",
+      "sourceKey": "sta.reg.lin.ao.resorder",
+      "sourceKind": "checkbox"
+    },
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable",
+      "sourceKey": "sta.series",
+      "sourceKind": "VarRange"
+    },
+    "sta.time.wma.weightsvar": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Weighted MA: Weights",
+      "sourceKey": "sta.time.wma.weightsvar",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1522": {
+    "sta.time.expsm.ao.0": {
+      "placement": "advanced",
+      "tab": "Model",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Alpha",
+      "sourceKey": "sta.time.expsm.ao.0",
+      "sourceKind": "number"
+    },
+    "ts.expsm.inits0": {
+      "placement": "advanced",
+      "tab": "Initial",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Initial level value",
+      "sourceKey": "ts.expsm.inits0",
+      "sourceKind": "list"
+    },
+    "ts.expsm.inits0.m": {
+      "placement": "advanced",
+      "tab": "Initial",
+      "indent": true,
+      "order": 2,
+      "sourceLabel": "M or Custom Value",
+      "sourceKey": "ts.expsm.inits0.m",
+      "sourceKind": "number"
+    },
+    "ts.report.forecast": {
+      "placement": "advanced",
+      "tab": "Forecast",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Display forecast",
+      "sourceKey": "ts.report.forecast",
+      "sourceKind": "checkbox"
+    },
+    "ts.report.forecast.n": {
+      "placement": "advanced",
+      "tab": "Forecast",
+      "indent": true,
+      "order": 4,
+      "sourceLabel": "Number of steps",
+      "sourceKey": "ts.report.forecast.n",
+      "sourceKind": "numberint",
+      "parent": "ts.report.forecast",
+      "parentInverse": false
+    },
+    "ts.report.plot.actual_smoothed": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Plot the actual and smoothed series",
+      "sourceKey": "ts.report.plot.actual_smoothed",
+      "sourceKind": "checkbox"
+    },
+    "report.residuals.plothistogram": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Plot histogram of residuals",
+      "sourceKey": "report.residuals.plothistogram",
+      "sourceKind": "checkbox"
+    },
+    "report.residuals.plotqq": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Normal Q-Q plot of residuals",
+      "sourceKey": "report.residuals.plotqq",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.lin.ao.resorder": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 8,
+      "sourceLabel": "Plot residuals vs. order",
+      "sourceKey": "sta.reg.lin.ao.resorder",
+      "sourceKind": "checkbox"
+    },
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable",
+      "sourceKey": "sta.series",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1540": {
+    "sta.time.dp.expsm": {
+      "placement": "advanced",
+      "tab": "Model",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Exponential Smoothing",
+      "sourceKey": "sta.time.dp.expsm",
+      "sourceKind": "list"
+    },
+    "sta.time.expsm.ao.0": {
+      "placement": "advanced",
+      "tab": "Model",
+      "indent": true,
+      "order": 1,
+      "sourceLabel": "Alpha",
+      "sourceKey": "sta.time.expsm.ao.0",
+      "sourceKind": "number"
+    },
+    "ts.expsm.beta.full": {
+      "placement": "advanced",
+      "tab": "Model",
+      "indent": true,
+      "order": 2,
+      "sourceLabel": "Beta (Trend parameter)",
+      "sourceKey": "ts.expsm.beta.full",
+      "sourceKind": "number"
+    },
+    "ts.expsm.phi.full": {
+      "placement": "advanced",
+      "tab": "Model",
+      "indent": true,
+      "order": 3,
+      "sourceLabel": "Phi (Damping parameter)",
+      "sourceKey": "ts.expsm.phi.full",
+      "sourceKind": "number"
+    },
+    "ts.expsm.init.custom": {
+      "placement": "advanced",
+      "tab": "Initial",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Set initial values",
+      "sourceKey": "ts.expsm.init.custom",
+      "sourceKind": "checkbox"
+    },
+    "ts.expsm.inits0": {
+      "placement": "advanced",
+      "tab": "Initial",
+      "indent": true,
+      "order": 5,
+      "sourceLabel": "Initial level value",
+      "sourceKey": "ts.expsm.inits0",
+      "sourceKind": "number",
+      "parent": "ts.expsm.init.custom",
+      "parentInverse": false
+    },
+    "ts.expsm.initt0": {
+      "placement": "advanced",
+      "tab": "Initial",
+      "indent": true,
+      "order": 6,
+      "sourceLabel": "Initial trend",
+      "sourceKey": "ts.expsm.initt0",
+      "sourceKind": "number",
+      "parent": "ts.expsm.init.custom",
+      "parentInverse": false
+    },
+    "ts.report.forecast": {
+      "placement": "advanced",
+      "tab": "Forecast",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Display forecast",
+      "sourceKey": "ts.report.forecast",
+      "sourceKind": "checkbox"
+    },
+    "ts.report.forecast.n": {
+      "placement": "advanced",
+      "tab": "Forecast",
+      "indent": true,
+      "order": 8,
+      "sourceLabel": "Number of steps",
+      "sourceKey": "ts.report.forecast.n",
+      "sourceKind": "numberint",
+      "parent": "ts.report.forecast",
+      "parentInverse": false
+    },
+    "ts.report.plot.actual_smoothed": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 9,
+      "sourceLabel": "Plot the actual and smoothed series",
+      "sourceKey": "ts.report.plot.actual_smoothed",
+      "sourceKind": "checkbox"
+    },
+    "report.residuals.plothistogram": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 10,
+      "sourceLabel": "Plot histogram of residuals",
+      "sourceKey": "report.residuals.plothistogram",
+      "sourceKind": "checkbox"
+    },
+    "report.residuals.plotqq": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 11,
+      "sourceLabel": "Normal Q-Q plot of residuals",
+      "sourceKey": "report.residuals.plotqq",
+      "sourceKind": "checkbox"
+    },
+    "sta.reg.lin.ao.resorder": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 12,
+      "sourceLabel": "Plot residuals vs. order",
+      "sourceKey": "sta.reg.lin.ao.resorder",
+      "sourceKind": "checkbox"
+    },
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable",
+      "sourceKey": "sta.series",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1520": {
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable",
+      "sourceKey": "sta.series",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1521": {
+    "sta.time.acf.ao.2": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Remove mean",
+      "sourceKey": "sta.time.acf.ao.2",
+      "sourceKind": "checkbox"
+    },
+    "sta.time.acf.ao.4": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Differencing lag",
+      "sourceKey": "sta.time.acf.ao.4",
+      "sourceKind": "numberint"
+    },
+    "sta.time.acf.ao.5": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Differences of order (repeat N times)",
+      "sourceKey": "sta.time.acf.ao.5",
+      "sourceKind": "numberint"
+    },
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable",
+      "sourceKey": "sta.series",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1523": {
+    "real": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Re",
+      "sourceKey": "Re",
+      "sourceKind": "VarRange"
+    },
+    "imaginary": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Im",
+      "sourceKey": "Im",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1524": {
+    "real": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Re",
+      "sourceKey": "Re",
+      "sourceKind": "VarRange"
+    },
+    "imaginary": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Im",
+      "sourceKey": "Im",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1620": {
+    "sta.surv.code.fail": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Code for failure (event occurred)",
+      "sourceKey": "sta.surv.code.fail",
+      "sourceKind": "string"
+    },
+    "sta.surv.code.censor": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Code for censored",
+      "sourceKey": "sta.surv.code.censor",
+      "sourceKind": "string"
+    },
+    "sta.surv.roc.code.unknown": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Unknown code",
+      "sourceKey": "sta.surv.roc.code.unknown",
+      "sourceKind": "list"
+    },
+    "sta.surv.lt.maxtime.ui": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Upper limit of the time",
+      "sourceKey": "sta.surv.lt.maxtime.ui",
+      "sourceKind": "number"
+    },
+    "sta.surv.lt.timeintw": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Interval width",
+      "sourceKey": "sta.surv.lt.timeintw",
+      "sourceKind": "number"
+    },
+    "sta.surv.lt.report.plot.sdf": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Plot survival function (SDF)",
+      "sourceKey": "sta.surv.lt.report.plot.sdf",
+      "sourceKind": "checkbox"
+    },
+    "sta.surv.lt.report.plot.sdf1m": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Plot 1-SDF",
+      "sourceKey": "sta.surv.lt.report.plot.sdf1m",
+      "sourceKind": "checkbox"
+    },
+    "sta.surv.lt.report.plot.sdflog": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Plot Log(SDF)",
+      "sourceKey": "sta.surv.lt.report.plot.sdflog",
+      "sourceKind": "checkbox"
+    },
+    "sta.surv.lt.report.plot.density": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 8,
+      "sourceLabel": "Plot probability density",
+      "sourceKey": "sta.surv.lt.report.plot.density",
+      "sourceKind": "checkbox"
+    },
+    "sta.surv.lt.report.plot.hazard": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 9,
+      "sourceLabel": "Plot hazard rate",
+      "sourceKey": "sta.surv.lt.report.plot.hazard",
+      "sourceKind": "checkbox"
+    },
+    "sta.surv.lt.plotstaircase": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 10,
+      "sourceLabel": "Plot survival functions as a staircase",
+      "sourceKey": "sta.surv.lt.plotstaircase",
+      "sourceKind": "checkbox"
+    },
+    "time": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Time",
+      "sourceKey": "sta.surv.time_",
+      "sourceKind": "VarRange"
+    },
+    "status": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Status",
+      "sourceKey": "sta.roc.status",
+      "sourceKind": "VarRangeText"
+    },
+    "group": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Groups",
+      "sourceKey": "GROUPS",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "1621": {
+    "sta.surv.code.fail": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Code for failure (event occurred)",
+      "sourceKey": "sta.surv.code.fail",
+      "sourceKind": "string"
+    },
+    "sta.surv.code.censor": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Code for censored",
+      "sourceKey": "sta.surv.code.censor",
+      "sourceKind": "string"
+    },
+    "sta.surv.roc.code.unknown": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Unknown code",
+      "sourceKey": "sta.surv.roc.code.unknown",
+      "sourceKind": "list"
+    },
+    "sta.surv.lt.report.plot.sdf": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Plot survival function (SDF)",
+      "sourceKey": "sta.surv.lt.report.plot.sdf",
+      "sourceKind": "checkbox"
+    },
+    "sta.charts.showci": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": true,
+      "order": 4,
+      "sourceLabel": "Show confidence intervals",
+      "sourceKey": "sta.charts.showci",
+      "sourceKind": "checkbox",
+      "parent": "sta.surv.lt.report.plot.sdf",
+      "parentInverse": false
+    },
+    "sta.surv.lt.report.plot.sdf1m": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Plot 1-SDF",
+      "sourceKey": "sta.surv.lt.report.plot.sdf1m",
+      "sourceKind": "checkbox"
+    },
+    "sta.surv.lt.report.plot.sdflog": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Plot Log(SDF)",
+      "sourceKey": "sta.surv.lt.report.plot.sdflog",
+      "sourceKind": "checkbox"
+    },
+    "sta.surv.lt.report.plot.hazard.cumulative": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Plot cumulative hazard",
+      "sourceKey": "sta.surv.lt.report.plot.hazard.cumulative",
+      "sourceKind": "checkbox"
+    },
+    "time": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Time",
+      "sourceKey": "sta.surv.time_",
+      "sourceKind": "VarRange"
+    },
+    "status": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Status",
+      "sourceKey": "sta.roc.status",
+      "sourceKind": "VarRangeText"
+    },
+    "group": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Groups",
+      "sourceKey": "GROUPS",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "1622": {
+    "sta.surv.code.fail": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Code for failure (event occurred)",
+      "sourceKey": "sta.surv.code.fail",
+      "sourceKind": "string"
+    },
+    "sta.surv.code.censor": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Code for censored",
+      "sourceKey": "sta.surv.code.censor",
+      "sourceKind": "string"
+    },
+    "sta.surv.roc.code.unknown": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Unknown code",
+      "sourceKey": "sta.surv.roc.code.unknown",
+      "sourceKind": "list"
+    },
+    "sta.surv.lt.report.plot.sdf": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Plot survival function (SDF)",
+      "sourceKey": "sta.surv.lt.report.plot.sdf",
+      "sourceKind": "checkbox"
+    },
+    "sta.surv.lt.report.plot.hazard.cumulative": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Plot cumulative hazard",
+      "sourceKey": "sta.surv.lt.report.plot.hazard.cumulative",
+      "sourceKind": "checkbox"
+    },
+    "sta.charts.showci": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": true,
+      "order": 5,
+      "sourceLabel": "Show confidence intervals",
+      "sourceKey": "sta.charts.showci",
+      "sourceKind": "checkbox",
+      "parent": "sta.surv.lt.report.plot.hazard.cumulative",
+      "parentInverse": false
+    },
+    "time": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Time",
+      "sourceKey": "sta.surv.time_",
+      "sourceKind": "VarRange"
+    },
+    "status": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Status",
+      "sourceKey": "sta.roc.status",
+      "sourceKind": "VarRangeText"
+    },
+    "group": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Groups",
+      "sourceKey": "GROUPS",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "1601": {
+    "sta.surv.probit.algo": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Model for estimation",
+      "sourceKey": "sta.surv.probit.algo",
+      "sourceKind": "list"
+    },
+    "sta.surv.probit.opt0": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Plot Probit-Dose instead of Percent-Dose",
+      "sourceKey": "sta.surv.probit.opt0",
+      "sourceKind": "checkbox"
+    },
+    "sta.surv.prob_perc_cor": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "log(Dose): Adjust 0% and 100% effect percentages",
+      "sourceKey": "sta.surv.prob_perc_cor",
+      "sourceKind": "list"
+    },
+    "sta.surv.probit.opt.intC": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Round non-integer values of Effect and Group Size",
+      "sourceKey": "sta.surv.probit.opt.intC",
+      "sourceKind": "checkbox"
+    },
+    "dose": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Dose (Stimulus)",
+      "sourceKey": "PROBIT_S_0",
+      "sourceKind": "VarRange"
+    },
+    "events": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Count (Effect)",
+      "sourceKey": "PROBIT_S_1",
+      "sourceKind": "VarRange"
+    },
+    "total": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Sample Size",
+      "sourceKey": "PROBIT_S_3",
+      "sourceKind": "VarRange"
+    },
+    "PROBIT_S_0.N": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Dose (Stimulus) #N",
+      "sourceKey": "PROBIT_S_0.N",
+      "sourceKind": "VarRange"
+    },
+    "PROBIT_S_1.N": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Count (Effect) #N",
+      "sourceKey": "PROBIT_S_1.N",
+      "sourceKind": "VarRange"
+    },
+    "PROBIT_S_3.N": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Sample Size #N",
+      "sourceKey": "PROBIT_S_3.N",
+      "sourceKind": "VarRange"
+    }
+  },
+  "1610": {
+    "sta.surv.roc.code.positive.ui": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Positive event code",
+      "sourceKey": "sta.surv.roc.code.positive.ui",
+      "sourceKind": "string"
+    },
+    "sta.surv.roc.code.negative.ui": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Negative event code",
+      "sourceKey": "sta.surv.roc.code.negative.ui",
+      "sourceKind": "string"
+    },
+    "sta.surv.roc.code.unknown": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Unknown code",
+      "sourceKey": "sta.surv.roc.code.unknown",
+      "sourceKind": "list"
+    },
+    "sta.surv.roc.threshold.cond": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Positive if test value X vs threshold T",
+      "sourceKey": "sta.surv.roc.threshold.cond",
+      "sourceKind": "list"
+    },
+    "sta.surv.roc.report.ss.opt": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Print curve coordinates and performance indices",
+      "sourceKey": "sta.surv.roc.report.ss.opt",
+      "sourceKind": "checkbox"
+    },
+    "sta.surv.roc.report.ci": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": true,
+      "order": 5,
+      "sourceLabel": "Include confidence intervals",
+      "sourceKey": "sta.surv.roc.report.ci",
+      "sourceKind": "checkbox",
+      "parent": "sta.surv.roc.report.ss.opt",
+      "parentInverse": false
+    },
+    "sta.surv.roc.report.tfpn": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": true,
+      "order": 6,
+      "sourceLabel": "Include fractions (TP, TN, FP, FN)",
+      "sourceKey": "sta.surv.roc.report.tfpn",
+      "sourceKind": "checkbox",
+      "parent": "sta.surv.roc.report.ss.opt",
+      "parentInverse": false
+    },
+    "score": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Test",
+      "sourceKey": "sta.roc.test",
+      "sourceKind": "VarRange"
+    },
+    "status": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Status",
+      "sourceKey": "sta.roc.status",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "1611": {
+    "sta.surv.roc.code.positive": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Positive event code",
+      "sourceKey": "sta.surv.roc.code.positive",
+      "sourceKind": "string"
+    },
+    "sta.surv.roc.code.negative": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Negative event code",
+      "sourceKey": "sta.surv.roc.code.negative",
+      "sourceKind": "string"
+    },
+    "sta.surv.roc.code.unknown": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Unknown code",
+      "sourceKey": "sta.surv.roc.code.unknown",
+      "sourceKind": "list"
+    },
+    "sta.surv.roc.threshold.cond": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Positive if test value X vs threshold T",
+      "sourceKey": "sta.surv.roc.threshold.cond",
+      "sourceKind": "list"
+    },
+    "sta.surv.roc.compare.opt": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Compare test variables",
+      "sourceKey": "sta.surv.roc.compare.opt",
+      "sourceKind": "list"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Test Variables",
+      "sourceKey": "sta.roc.test.vars",
+      "sourceKind": "VarRange"
+    },
+    "status": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Status",
+      "sourceKey": "sta.roc.status",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "1630": {
+    "sta.surv.ba.tablediffaverage.opt": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Display table of averages and differences",
+      "sourceKey": "sta.surv.ba.tablediffaverage.opt",
+      "sourceKind": "checkbox"
+    },
+    "sta.chart.ploty": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Plot on Y-Axis",
+      "sourceKey": "sta.chart.ploty",
+      "sourceKind": "list"
+    },
+    "first": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Method 1",
+      "sourceKey": "sta.ba.method.1",
+      "sourceKind": "VarRange"
+    },
+    "second": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Method 2",
+      "sourceKey": "sta.ba.method.2",
+      "sourceKind": "VarRange"
+    },
+    "ba.groups.subject": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Subject",
+      "sourceKey": "ba.groups.subject",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "3001": {
+    "sta.data.stackcols.numgroups": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Use column index as group name",
+      "sourceKey": "sta.data.stackcols.numgroups",
+      "sourceKind": "checkbox"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    }
+  },
+  "3002": {
+    "data.sort": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Sort",
+      "sourceKey": "data.sort",
+      "sourceKind": "list"
+    },
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variable",
+      "sourceKey": "sta.in.range",
+      "sourceKind": "VarRange"
+    },
+    "group": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Groups",
+      "sourceKey": "GROUPS",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "3200": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "3003": {
+    "method": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Method",
+      "sourceKey": "sta.method",
+      "sourceKind": "list"
+    },
+    "a": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 1,
+      "sourceLabel": "A",
+      "sourceKey": "A",
+      "sourceKind": "number"
+    },
+    "b": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 2,
+      "sourceLabel": "B",
+      "sourceKey": "B",
+      "sourceKind": "number"
+    },
+    "ddof": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 3,
+      "sourceLabel": "Standard Deviation",
+      "sourceKey": "DS_STDDEV",
+      "sourceKind": "list"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    }
+  },
+  "3005": {
+    "data.boxcox.lambda.estimate.ui": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Compute the maximum-likelihood estimate of lambda",
+      "sourceKey": "data.boxcox.lambda.estimate.ui",
+      "sourceKind": "checkbox"
+    },
+    "data.boxcox.lambda.ui": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 1,
+      "sourceLabel": "Lambda [-5;5]",
+      "sourceKey": "data.boxcox.lambda.ui",
+      "sourceKind": "number",
+      "parent": "data.boxcox.lambda.estimate.ui",
+      "parentInverse": true
+    },
+    "data.boxcox.gm.ui": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Scale to original units (divide by geometric mean ^{Lambda - 1})",
+      "sourceKey": "data.boxcox.gm.ui",
+      "sourceKind": "checkbox"
+    },
+    "data.boxcox.values.addconst": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Include a shift parameter",
+      "sourceKey": "data.boxcox.values.addconst",
+      "sourceKind": "checkbox"
+    },
+    "data.boxcox.shift.const.ui": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 4,
+      "sourceLabel": "Add a constant to each observation",
+      "sourceKey": "data.boxcox.shift.const.ui",
+      "sourceKind": "number",
+      "parent": "data.boxcox.values.addconst",
+      "parentInverse": false
+    },
+    "data.boxcox.values.addconstmin": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 5,
+      "sourceLabel": "Subtract the minimum value (if min \u2264 0)",
+      "sourceKey": "data.boxcox.values.addconstmin",
+      "sourceKind": "checkbox",
+      "parent": "data.boxcox.values.addconst",
+      "parentInverse": false
+    },
+    "data.boxcox.qq.ui": {
+      "placement": "advanced",
+      "tab": "Charts",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Display normal Q-Q plots for original and transformed data",
+      "sourceKey": "data.boxcox.qq.ui",
+      "sourceKind": "checkbox"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    }
+  },
+  "3100": {
+    "sort": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Sort",
+      "sourceKey": "data.sort",
+      "sourceKind": "list"
+    },
+    "variables": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Number of new variables",
+      "sourceKey": "sta.data.tr.newvars",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "count": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Random Numbers Count",
+      "sourceKey": "data.rnd.count",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "low": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Lower Bound",
+      "sourceKey": "data.rnd.blower",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "high": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Upper Bound",
+      "sourceKey": "data.rnd.bupper",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "3101": {
+    "sort": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Sort",
+      "sourceKey": "data.sort",
+      "sourceKind": "list"
+    },
+    "variables": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Number of new variables",
+      "sourceKey": "sta.data.tr.newvars",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "count": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Random Numbers Count",
+      "sourceKey": "data.rnd.count",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "low": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Lower Bound",
+      "sourceKey": "data.rnd.blower",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "high": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Upper Bound",
+      "sourceKey": "data.rnd.bupper",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "3102": {
+    "sort": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Sort",
+      "sourceKey": "data.sort",
+      "sourceKind": "list"
+    },
+    "variables": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Number of new variables",
+      "sourceKey": "sta.data.tr.newvars",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "count": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Random Numbers Count",
+      "sourceKey": "data.rnd.count",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "mean": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Mean",
+      "sourceKey": "DS_AVERAGE",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "sd": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Standard Deviation",
+      "sourceKey": "DS_STDDEV",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "3103": {
+    "sort": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Sort",
+      "sourceKey": "data.sort",
+      "sourceKind": "list"
+    },
+    "variables": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Number of new variables",
+      "sourceKey": "sta.data.tr.newvars",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "count": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Random Numbers Count",
+      "sourceKey": "data.rnd.count",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "df": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Degrees of Freedom (#1)",
+      "sourceKey": "data.rnd.df1",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "3104": {
+    "sort": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Sort",
+      "sourceKey": "data.sort",
+      "sourceKind": "list"
+    },
+    "variables": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Number of new variables",
+      "sourceKey": "sta.data.tr.newvars",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "count": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Random Numbers Count",
+      "sourceKey": "data.rnd.count",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "df": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Degrees of Freedom (#1)",
+      "sourceKey": "data.rnd.df1",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "df2": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Degrees of Freedom (#2)",
+      "sourceKey": "data.rnd.df2",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "1701": {
+    "precision": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Precision (%)",
+      "sourceKey": "sta.pass.precision",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "prevalence": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Prevalence (%)",
+      "sourceKey": "sta.pass.prev",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "population": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Population",
+      "sourceKey": "sta.pass.population",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "alpha": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Alpha (significance level)",
+      "sourceKey": "sta.ci_level",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "1702": {
+    "successes": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Number of Successful Cases",
+      "sourceKey": "sta.pass.N_succ",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "total": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Total number of observations",
+      "sourceKey": "sta.nps.chi.total",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "alpha": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Alpha (significance level)",
+      "sourceKey": "sta.ci_level",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "1703": {
+    "prevalence": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Prevalence (%)",
+      "sourceKey": "sta.pass.prev",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "events": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Minimum number of successes",
+      "sourceKey": "sta.pass.mincases",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "PROB": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "p-value",
+      "sourceKey": "PROB",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "1704": {
+    "sta.onesided": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "One-sided test",
+      "sourceKey": "sta.onesided",
+      "sourceKind": "checkbox"
+    },
+    "sta.pass.matched_design": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "1:1 matched study design",
+      "sourceKey": "sta.pass.matched_design",
+      "sourceKind": "checkbox"
+    },
+    "odds_ratio": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Minimum odds ratio",
+      "sourceKey": "sta.pass.minoddsratio",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "exposure": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Exposed controls (%)",
+      "sourceKey": "sta.pass.percent_exposed",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "power": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Power (%)",
+      "sourceKey": "sta.testpower",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "ratio": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Number of controls per case",
+      "sourceKey": "sta.pass.num_controls",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "3201": {
+    "left": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Matrix #1",
+      "sourceKey": "MATRIX.1",
+      "sourceKind": "VarRange"
+    },
+    "right": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Matrix #2",
+      "sourceKey": "MATRIX.2",
+      "sourceKind": "VarRange"
+    }
+  },
+  "3202": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Matrix",
+      "sourceKey": "MATRIX",
+      "sourceKind": "VarRange"
+    }
+  },
+  "3203": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Matrix",
+      "sourceKey": "MATRIX",
+      "sourceKind": "VarRange"
+    }
+  },
+  "3301": {
+    "replace": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Sampling with replacement",
+      "sourceKey": "sta.data.samp.w_replace",
+      "sourceKind": "checkbox"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    },
+    "count": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Number of Samples",
+      "sourceKey": "sta.data.samp.ssize",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "3302": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    },
+    "interval": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Interval/Skip (Extract Every i-th value)",
+      "sourceKey": "sta.data.samp.per.0",
+      "sourceKind": "Cell",
+      "cellReference": true
+    },
+    "start": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "First Observation Index",
+      "sourceKey": "sta.data.samp.per.1",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "3303": {
+    "sta.data.samp.cond.cond": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Condition",
+      "sourceKey": "sta.data.samp.cond.cond",
+      "sourceKind": "list"
+    },
+    "A": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "A",
+      "sourceKey": "A",
+      "sourceKind": "number"
+    },
+    "B": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "B",
+      "sourceKey": "B",
+      "sourceKind": "number"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    },
+    "condition_column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Condition",
+      "sourceKey": "sta.data.samp.cond.cond",
+      "sourceKind": "VarRange"
+    }
+  },
+  "4001": {
+    "sta.percentile.def": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Percentiles definition",
+      "sourceKey": "sta.percentile.def",
+      "sourceKind": "list"
+    },
+    "sta.chart.box.whisker.def": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Whiskers definition",
+      "sourceKey": "sta.chart.box.whisker.def",
+      "sourceKind": "list"
+    },
+    "sta.chart.box.whisker.percentile": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 2,
+      "sourceLabel": "Whisker percentile P for #4 [1-25]",
+      "sourceKey": "sta.chart.box.whisker.percentile",
+      "sourceKind": "numberint"
+    },
+    "sta.chart.legend": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Show legend",
+      "sourceKey": "sta.chart.legend",
+      "sourceKind": "checkbox"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    },
+    "group": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Groups",
+      "sourceKey": "GROUPS",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "4003": {
+    "sta.chart.stemleaf.opt.addspaces": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Add spaces to the leaves",
+      "sourceKey": "sta.chart.stemleaf.opt.addspaces",
+      "sourceKind": "checkbox"
+    },
+    "sta.chart.stemleaf.opt.reverseorder": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Reverse Stem Order",
+      "sourceKey": "sta.chart.stemleaf.opt.reverseorder",
+      "sourceKind": "checkbox"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    }
+  },
+  "4002": {
+    "sta.plotxy.reverseaxes": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Reverse axes",
+      "sourceKey": "sta.plotxy.reverseaxes",
+      "sourceKind": "list"
+    },
+    "charts.scatter.group.plots": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Scatter plots by group",
+      "sourceKey": "charts.scatter.group.plots",
+      "sourceKind": "list"
+    },
+    "charts.ellipses.add": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Add ellipse(s)",
+      "sourceKey": "charts.ellipses.add",
+      "sourceKind": "list"
+    },
+    "ellipse.values.ui": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 3,
+      "sourceLabel": "Intervals (1-Alpha)%",
+      "sourceKey": "ellipse.values.ui",
+      "sourceKind": "string"
+    },
+    "y": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Y Values",
+      "sourceKey": "DIAG_Y",
+      "sourceKind": "VarRange"
+    },
+    "x": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "X Values",
+      "sourceKey": "DIAG_X",
+      "sourceKind": "VarRange"
+    },
+    "group": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Groups",
+      "sourceKey": "GROUPS",
+      "sourceKind": "VarRangeText"
+    }
+  },
+  "4011": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    },
+    "sta.qq.proportion.method": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Proportion estimation formula",
+      "sourceKey": "sta.qq.proportion.method",
+      "sourceKind": "list"
+    },
+    "sta.rankperc.tie": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Ties are assigned to",
+      "sourceKey": "sta.rankperc.tie",
+      "sourceKind": "list"
+    },
+    "sta.distr.params.estimate.opt": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Estimate distribution parameters from data",
+      "sourceKey": "sta.distr.params.estimate.opt",
+      "sourceKind": "checkbox"
+    },
+    "DS_AVERAGE": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 3,
+      "sourceLabel": "Mean",
+      "sourceKey": "DS_AVERAGE",
+      "sourceKind": "number",
+      "parent": "sta.distr.params.estimate.opt",
+      "parentInverse": true
+    },
+    "DS_STDDEV": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 4,
+      "sourceLabel": "Standard Deviation",
+      "sourceKey": "DS_STDDEV",
+      "sourceKind": "number",
+      "parent": "sta.distr.params.estimate.opt",
+      "parentInverse": true
+    },
+    "sta.qq.swapaxes": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Swap axes (plot empirical data on Y axis [vertical scale])",
+      "sourceKey": "sta.qq.swapaxes",
+      "sourceKind": "checkbox"
+    },
+    "sta.qq.detrended.show": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Detrended plot",
+      "sourceKey": "sta.qq.detrended.show",
+      "sourceKind": "checkbox"
+    },
+    "sta.qq.plot.showline": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Reference line",
+      "sourceKey": "sta.qq.plot.showline",
+      "sourceKind": "checkbox"
+    }
+  },
+  "4012": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    },
+    "sta.qq.proportion.method": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Proportion estimation formula",
+      "sourceKey": "sta.qq.proportion.method",
+      "sourceKind": "list"
+    },
+    "sta.rankperc.tie": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Ties are assigned to",
+      "sourceKey": "sta.rankperc.tie",
+      "sourceKind": "list"
+    },
+    "sta.distr.params.estimate.opt": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Estimate distribution parameters from data",
+      "sourceKey": "sta.distr.params.estimate.opt",
+      "sourceKind": "checkbox"
+    },
+    "sta.beta.alpha": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 3,
+      "sourceLabel": "Alpha",
+      "sourceKey": "sta.beta.alpha",
+      "sourceKind": "number",
+      "parent": "sta.distr.params.estimate.opt",
+      "parentInverse": true
+    },
+    "sta.beta.beta": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 4,
+      "sourceLabel": "Beta",
+      "sourceKey": "sta.beta.beta",
+      "sourceKind": "number",
+      "parent": "sta.distr.params.estimate.opt",
+      "parentInverse": true
+    },
+    "sta.qq.swapaxes": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Swap axes (plot empirical data on Y axis [vertical scale])",
+      "sourceKey": "sta.qq.swapaxes",
+      "sourceKind": "checkbox"
+    },
+    "sta.qq.detrended.show": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Detrended plot",
+      "sourceKey": "sta.qq.detrended.show",
+      "sourceKind": "checkbox"
+    },
+    "sta.qq.plot.showline": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Reference line",
+      "sourceKey": "sta.qq.plot.showline",
+      "sourceKind": "checkbox"
+    }
+  },
+  "4013": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    },
+    "sta.qq.proportion.method": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Proportion estimation formula",
+      "sourceKey": "sta.qq.proportion.method",
+      "sourceKind": "list"
+    },
+    "sta.rankperc.tie": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Ties are assigned to",
+      "sourceKey": "sta.rankperc.tie",
+      "sourceKind": "list"
+    },
+    "DF": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Degrees of Freedom",
+      "sourceKey": "DF",
+      "sourceKind": "number"
+    },
+    "sta.qq.swapaxes": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Swap axes (plot empirical data on Y axis [vertical scale])",
+      "sourceKey": "sta.qq.swapaxes",
+      "sourceKind": "checkbox"
+    },
+    "sta.qq.detrended.show": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Detrended plot",
+      "sourceKey": "sta.qq.detrended.show",
+      "sourceKind": "checkbox"
+    },
+    "sta.qq.plot.showline": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Reference line",
+      "sourceKey": "sta.qq.plot.showline",
+      "sourceKind": "checkbox"
+    }
+  },
+  "4014": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    },
+    "sta.qq.proportion.method": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Proportion estimation formula",
+      "sourceKey": "sta.qq.proportion.method",
+      "sourceKind": "list"
+    },
+    "sta.rankperc.tie": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Ties are assigned to",
+      "sourceKey": "sta.rankperc.tie",
+      "sourceKind": "list"
+    },
+    "sta.distr.params.estimate.opt": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Estimate distribution parameters from data",
+      "sourceKey": "sta.distr.params.estimate.opt",
+      "sourceKind": "checkbox"
+    },
+    "sta.gamma.shapek": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 3,
+      "sourceLabel": "Shape k",
+      "sourceKey": "sta.gamma.shapek",
+      "sourceKind": "number",
+      "parent": "sta.distr.params.estimate.opt",
+      "parentInverse": true
+    },
+    "sta.gamma.scaletheta": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 4,
+      "sourceLabel": "Scale Theta",
+      "sourceKey": "sta.gamma.scaletheta",
+      "sourceKind": "number",
+      "parent": "sta.distr.params.estimate.opt",
+      "parentInverse": true
+    },
+    "sta.qq.swapaxes": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Swap axes (plot empirical data on Y axis [vertical scale])",
+      "sourceKey": "sta.qq.swapaxes",
+      "sourceKind": "checkbox"
+    },
+    "sta.qq.detrended.show": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Detrended plot",
+      "sourceKey": "sta.qq.detrended.show",
+      "sourceKind": "checkbox"
+    },
+    "sta.qq.plot.showline": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Reference line",
+      "sourceKey": "sta.qq.plot.showline",
+      "sourceKind": "checkbox"
+    }
+  },
+  "4015": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    },
+    "sta.qq.proportion.method": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Proportion estimation formula",
+      "sourceKey": "sta.qq.proportion.method",
+      "sourceKind": "list"
+    },
+    "sta.rankperc.tie": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Ties are assigned to",
+      "sourceKey": "sta.rankperc.tie",
+      "sourceKind": "list"
+    },
+    "sta.distr.params.estimate.opt": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Estimate distribution parameters from data",
+      "sourceKey": "sta.distr.params.estimate.opt",
+      "sourceKind": "checkbox"
+    },
+    "sta.distr.shape": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 3,
+      "sourceLabel": "Shape",
+      "sourceKey": "sta.distr.shape",
+      "sourceKind": "number",
+      "parent": "sta.distr.params.estimate.opt",
+      "parentInverse": true
+    },
+    "sta.distr.scale": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 4,
+      "sourceLabel": "Scale",
+      "sourceKey": "sta.distr.scale",
+      "sourceKind": "number",
+      "parent": "sta.distr.params.estimate.opt",
+      "parentInverse": true
+    },
+    "sta.qq.swapaxes": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Swap axes (plot empirical data on Y axis [vertical scale])",
+      "sourceKey": "sta.qq.swapaxes",
+      "sourceKind": "checkbox"
+    },
+    "sta.qq.detrended.show": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Detrended plot",
+      "sourceKey": "sta.qq.detrended.show",
+      "sourceKind": "checkbox"
+    },
+    "sta.qq.plot.showline": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Reference line",
+      "sourceKey": "sta.qq.plot.showline",
+      "sourceKind": "checkbox"
+    }
+  },
+  "4016": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    },
+    "sta.qq.proportion.method": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Proportion estimation formula",
+      "sourceKey": "sta.qq.proportion.method",
+      "sourceKind": "list"
+    },
+    "sta.rankperc.tie": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Ties are assigned to",
+      "sourceKey": "sta.rankperc.tie",
+      "sourceKind": "list"
+    },
+    "DF": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Degrees of Freedom",
+      "sourceKey": "DF",
+      "sourceKind": "number"
+    },
+    "sta.qq.swapaxes": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Swap axes (plot empirical data on Y axis [vertical scale])",
+      "sourceKey": "sta.qq.swapaxes",
+      "sourceKind": "checkbox"
+    },
+    "sta.qq.detrended.show": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "Detrended plot",
+      "sourceKey": "sta.qq.detrended.show",
+      "sourceKind": "checkbox"
+    },
+    "sta.qq.plot.showline": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Reference line",
+      "sourceKey": "sta.qq.plot.showline",
+      "sourceKind": "checkbox"
+    }
+  },
+  "4017": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    },
+    "sta.qq.proportion.method": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Proportion estimation formula",
+      "sourceKey": "sta.qq.proportion.method",
+      "sourceKind": "list"
+    },
+    "sta.rankperc.tie": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Ties are assigned to",
+      "sourceKey": "sta.rankperc.tie",
+      "sourceKind": "list"
+    },
+    "sta.distr.params.estimate.opt": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Estimate distribution parameters from data",
+      "sourceKey": "sta.distr.params.estimate.opt",
+      "sourceKind": "checkbox"
+    },
+    "DS_MIN": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 3,
+      "sourceLabel": "Minimum",
+      "sourceKey": "DS_MIN",
+      "sourceKind": "number",
+      "parent": "sta.distr.params.estimate.opt",
+      "parentInverse": true
+    },
+    "DS_MAX": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 4,
+      "sourceLabel": "Maximum",
+      "sourceKey": "DS_MAX",
+      "sourceKind": "number",
+      "parent": "sta.distr.params.estimate.opt",
+      "parentInverse": true
+    },
+    "sta.qq.swapaxes": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Swap axes (plot empirical data on Y axis [vertical scale])",
+      "sourceKey": "sta.qq.swapaxes",
+      "sourceKind": "checkbox"
+    },
+    "sta.qq.detrended.show": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Detrended plot",
+      "sourceKey": "sta.qq.detrended.show",
+      "sourceKind": "checkbox"
+    },
+    "sta.qq.plot.showline": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Reference line",
+      "sourceKey": "sta.qq.plot.showline",
+      "sourceKind": "checkbox"
+    }
+  },
+  "4018": {
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Variables",
+      "sourceKey": "sta.in.ranges",
+      "sourceKind": "VarRange"
+    },
+    "sta.qq.proportion.method": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Proportion estimation formula",
+      "sourceKey": "sta.qq.proportion.method",
+      "sourceKind": "list"
+    },
+    "sta.rankperc.tie": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Ties are assigned to",
+      "sourceKey": "sta.rankperc.tie",
+      "sourceKind": "list"
+    },
+    "sta.distr.params.estimate.opt": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Estimate distribution parameters from data",
+      "sourceKey": "sta.distr.params.estimate.opt",
+      "sourceKind": "checkbox"
+    },
+    "sta.gamma.shapek": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 3,
+      "sourceLabel": "Shape k",
+      "sourceKey": "sta.gamma.shapek",
+      "sourceKind": "number",
+      "parent": "sta.distr.params.estimate.opt",
+      "parentInverse": true
+    },
+    "sta.weibull.scalelambda": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 4,
+      "sourceLabel": "Scale Lambda",
+      "sourceKey": "sta.weibull.scalelambda",
+      "sourceKind": "number",
+      "parent": "sta.distr.params.estimate.opt",
+      "parentInverse": true
+    },
+    "sta.qq.swapaxes": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "Swap axes (plot empirical data on Y axis [vertical scale])",
+      "sourceKey": "sta.qq.swapaxes",
+      "sourceKind": "checkbox"
+    },
+    "sta.qq.detrended.show": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 6,
+      "sourceLabel": "Detrended plot",
+      "sourceKey": "sta.qq.detrended.show",
+      "sourceKind": "checkbox"
+    },
+    "sta.qq.plot.showline": {
+      "placement": "advanced",
+      "tab": "Display",
+      "indent": false,
+      "order": 7,
+      "sourceLabel": "Reference line",
+      "sourceKey": "sta.qq.plot.showline",
+      "sourceKind": "checkbox"
+    }
+  },
+  "4102": {
+    "sta.cc.ao.nosigmas": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Control limits at these multiples of standard deviations",
+      "sourceKey": "sta.cc.ao.nosigmas",
+      "sourceKind": "number"
+    },
+    "sta.cc.datalayout": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Data layout",
+      "sourceKey": "sta.cc.datalayout",
+      "sourceKind": "list"
+    },
+    "sta.cc.uneqgroup.title": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "For unequal subgroup sizes use",
+      "sourceKey": "sta.cc.uneqgroup.title",
+      "sourceKind": "list"
+    },
+    "sta.cc.stddevest": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Estimate sigma using",
+      "sourceKey": "sta.cc.stddevest",
+      "sourceKind": "list"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Measurements",
+      "sourceKey": "sta.cc.meas",
+      "sourceKind": "VarRange"
+    },
+    "sta.cc.xbar.GROUPS": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Data layout #1 - Groups",
+      "sourceKey": "sta.cc.xbar.GROUPS",
+      "sourceKind": "VarRangeText"
+    },
+    "sta.cc.xbar.d2.subgrsize": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Data layout #2 - Subgroup Sizes",
+      "sourceKey": "sta.cc.xbar.d2.subgrsize",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "4103": {
+    "sta.cc.ao.nosigmas": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Control limits at these multiples of standard deviations",
+      "sourceKey": "sta.cc.ao.nosigmas",
+      "sourceKind": "number"
+    },
+    "sta.cc.datalayout": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Data layout",
+      "sourceKey": "sta.cc.datalayout",
+      "sourceKind": "list"
+    },
+    "sta.cc.uneqgroup.title": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "For unequal subgroup sizes use",
+      "sourceKey": "sta.cc.uneqgroup.title",
+      "sourceKind": "list"
+    },
+    "sta.cc.stddevest": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Estimate sigma using",
+      "sourceKey": "sta.cc.stddevest",
+      "sourceKind": "list"
+    },
+    "columns": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Measurements",
+      "sourceKey": "sta.cc.meas",
+      "sourceKind": "VarRange"
+    },
+    "sta.cc.xbar.GROUPS": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Data layout #1 - Groups",
+      "sourceKey": "sta.cc.xbar.GROUPS",
+      "sourceKind": "VarRangeText"
+    },
+    "sta.cc.xbar.d2.subgrsize": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Data layout #2 - Subgroup Sizes",
+      "sourceKey": "sta.cc.xbar.d2.subgrsize",
+      "sourceKind": "Cell",
+      "cellReference": true
+    }
+  },
+  "4104": {
+    "sta.cc.ao.nosigmas": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Control limits at these multiples of standard deviations",
+      "sourceKey": "sta.cc.ao.nosigmas",
+      "sourceKind": "number"
+    },
+    "sta.cc.target.auto": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Use grand mean as the target",
+      "sourceKey": "sta.cc.target.auto",
+      "sourceKind": "checkbox"
+    },
+    "sta.cc.target": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": true,
+      "order": 2,
+      "sourceLabel": "Target",
+      "sourceKey": "sta.cc.target",
+      "sourceKind": "number",
+      "parent": "sta.cc.target.auto",
+      "parentInverse": true
+    },
+    "sta.cc.subgr_center": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Center V-Mask On Subgroup No. (0 = last [default])",
+      "sourceKey": "sta.cc.subgr_center",
+      "sourceKind": "numberint"
+    },
+    "H": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 4,
+      "sourceLabel": "H",
+      "sourceKey": "H",
+      "sourceKind": "number"
+    },
+    "K": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 5,
+      "sourceLabel": "K",
+      "sourceKey": "K",
+      "sourceKind": "number"
+    },
+    "GROUPS": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Groups",
+      "sourceKey": "GROUPS",
+      "sourceKind": "VarRange"
+    },
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Measurements",
+      "sourceKey": "sta.cc.meas",
+      "sourceKind": "VarRange"
+    }
+  },
+  "4105": {
+    "sta.cc.ao.nosigmas": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Control limits at these multiples of standard deviations",
+      "sourceKey": "sta.cc.ao.nosigmas",
+      "sourceKind": "number"
+    },
+    "sta.cc.p.prop.target.opt": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Target proportion [leave empty to estimate]",
+      "sourceKey": "sta.cc.p.prop.target.opt",
+      "sourceKind": "string",
+      "validator": "numbernullable"
+    },
+    "sta.charts.plot": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 2,
+      "sourceLabel": "Plot",
+      "sourceKey": "sta.charts.plot",
+      "sourceKind": "list"
+    },
+    "sta.showstatsfor": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 3,
+      "sourceLabel": "Show statistics",
+      "sourceKey": "sta.showstatsfor",
+      "sourceKind": "list"
+    },
+    "count_column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Measurements",
+      "sourceKey": "sta.cc.meas",
+      "sourceKind": "VarRange"
+    },
+    "sta.cc.subgr_size": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Subgroup Sizes",
+      "sourceKey": "sta.cc.subgr_size",
+      "sourceKind": "VarRange",
+      "constantSubstitute": true
+    }
+  },
+  "4106": {
+    "sigmas": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Control limits at these multiples of standard deviations",
+      "sourceKey": "sta.cc.ao.nosigmas",
+      "sourceKind": "number"
+    },
+    "count_column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Measurements",
+      "sourceKey": "sta.cc.meas",
+      "sourceKind": "VarRange"
+    }
+  },
+  "4107": {
+    "sta.cc.ao.nosigmas": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Control limits at these multiples of standard deviations",
+      "sourceKey": "sta.cc.ao.nosigmas",
+      "sourceKind": "number"
+    },
+    "count_column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Measurements",
+      "sourceKey": "sta.cc.meas",
+      "sourceKind": "VarRange"
+    },
+    "sta.cc.subgr_size": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Subgroup Sizes",
+      "sourceKey": "sta.cc.subgr_size",
+      "sourceKind": "VarRange",
+      "constantSubstitute": true
+    }
+  },
+  "4108": {
+    "sta.cc.ao.nosigmas": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Control limits at these multiples of standard deviations",
+      "sourceKey": "sta.cc.ao.nosigmas",
+      "sourceKind": "number"
+    },
+    "sta.cc.stddevest": {
+      "placement": "advanced",
+      "tab": "Options",
+      "indent": false,
+      "order": 1,
+      "sourceLabel": "Estimate sigma using",
+      "sourceKey": "sta.cc.stddevest",
+      "sourceKind": "list"
+    },
+    "column": {
+      "placement": "input",
+      "tab": "Options",
+      "indent": false,
+      "order": 0,
+      "sourceLabel": "Measurements",
+      "sourceKey": "sta.cc.meas",
+      "sourceKind": "VarRange"
+    }
+  }
+}

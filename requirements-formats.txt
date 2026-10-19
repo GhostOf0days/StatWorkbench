@@ -1,0 +1,7 @@
+# Optional parsers; no R interpreter or executable scripts are invoked.
+xlrd>=2.0,<3
+odfpy>=1.4,<2
+pyreadstat>=1.2,<2
+dbfread>=2.0,<3
+pyreadr>=0.5,<1
+

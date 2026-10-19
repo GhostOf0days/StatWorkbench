@@ -1,0 +1,10 @@
+[
+  {"id":"copula.bivariate","name":"Bivariate Copulas"},
+  {"id":"dependence.association","name":"Correlation Matrix"},
+  {"id":"dependence.partial","name":"Partial Correlation"},
+  {"id":"dependence.distance","name":"Distance Correlation"},
+  {"id":"dependence.mutual_information","name":"Binned Mutual Information"},
+  {"id":"dependence.tail_coexceedance","name":"Empirical Tail Co-exceedance"},
+  {"id":"dependence.lead_lag","name":"Lead–Lag Cross-Correlation"},
+  {"id":"stochastic.markov_chain","name":"Markov Chain & Ergodicity"}
+]

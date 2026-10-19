@@ -1,0 +1,470 @@
+[
+  {
+    "id": "1001",
+    "name": "Descriptive Statistics"
+  },
+  {
+    "id": "1002",
+    "name": "Descriptive Statistics (use group variable)"
+  },
+  {
+    "id": "1004",
+    "name": "One-Sample z-Test for Mean"
+  },
+  {
+    "id": "1007",
+    "name": "Two-Sample z-Test for Means"
+  },
+  {
+    "id": "1003",
+    "name": "One-Sample T-Test"
+  },
+  {
+    "id": "1005",
+    "name": "Two-Sample T-Test"
+  },
+  {
+    "id": "10052",
+    "name": "Two-Sample T-Test (use summarized data)"
+  },
+  {
+    "id": "10053",
+    "name": "Two-Sample T-Test (use group variable)"
+  },
+  {
+    "id": "1008",
+    "name": "F-Test for Variances"
+  },
+  {
+    "id": "1009",
+    "name": "Linear Correlations [Pearson]"
+  },
+  {
+    "id": "1010",
+    "name": "Covariance"
+  },
+  {
+    "id": "1016",
+    "name": "Partial Correlations"
+  },
+  {
+    "id": "1011",
+    "name": "Normality Tests"
+  },
+  {
+    "id": "1012",
+    "name": "Frequency Tables (categorical data)"
+  },
+  {
+    "id": "1013",
+    "name": "Frequency Tables (continuous data)"
+  },
+  {
+    "id": "1014",
+    "name": "Cross Tabulation and Chi-Square"
+  },
+  {
+    "id": "1015",
+    "name": "Histogram"
+  },
+  {
+    "id": "1102",
+    "name": "One-way ANOVA (unstacked)"
+  },
+  {
+    "id": "1103",
+    "name": "One-way ANOVA (use group variable)"
+  },
+  {
+    "id": "1104",
+    "name": "Two-way ANOVA"
+  },
+  {
+    "id": "1105",
+    "name": "Three-way ANOVA"
+  },
+  {
+    "id": "1108",
+    "name": "Repeated Measures (Within Subjects) ANOVA"
+  },
+  {
+    "id": "1106",
+    "name": "Mixed Treatment by Subjects ANOVA"
+  },
+  {
+    "id": "1107",
+    "name": "Mixed ANOVA with Two Treatments"
+  },
+  {
+    "id": "1109",
+    "name": "General Linear Model (GLM)"
+  },
+  {
+    "id": "1201",
+    "name": "1: Three Factors (A, B, C) With No Interactions"
+  },
+  {
+    "id": "1202",
+    "name": "2: Four Factors (A, B, C, D) With Partial Interactions"
+  },
+  {
+    "id": "1203",
+    "name": "3: Four Factors (A, B, C, D) With Partial Confounding Of AxBxC Interaction"
+  },
+  {
+    "id": "1204",
+    "name": "4: Greco-Latin With No Interactions"
+  },
+  {
+    "id": "1205",
+    "name": "5: Repeated Measures Latin Square (Random Assignment Of Groups To Rows)"
+  },
+  {
+    "id": "1206",
+    "name": "6: Fractional Replication Of A Three-Factor Factorial Experiment In Incomplete Blocks"
+  },
+  {
+    "id": "1207",
+    "name": "7: Plan 5 With Superimposing An Orthogonal Latin Square"
+  },
+  {
+    "id": "1208",
+    "name": "8: AxBxC (Same Squares Used For All Levels Of Factor C)"
+  },
+  {
+    "id": "1110",
+    "name": "Discriminant Function Analysis"
+  },
+  {
+    "id": "1120",
+    "name": "Principal Component Analysis (PCA)"
+  },
+  {
+    "id": "1121",
+    "name": "Factor Analysis"
+  },
+  {
+    "id": "1130",
+    "name": "K-Means Clustering"
+  },
+  {
+    "id": "1132",
+    "name": "Hierarchical Clustering"
+  },
+  {
+    "id": "1301",
+    "name": "Multiple Linear Regression"
+  },
+  {
+    "id": "1303",
+    "name": "Polynomial Regression"
+  },
+  {
+    "id": "1310",
+    "name": "Curve Fit"
+  },
+  {
+    "id": "1302",
+    "name": "Weighted Least Squares Regression"
+  },
+  {
+    "id": "1304",
+    "name": "Forward Stepwise"
+  },
+  {
+    "id": "1305",
+    "name": "Backward Stepwise"
+  },
+  {
+    "id": "1307",
+    "name": "Best Subsets Regression"
+  },
+  {
+    "id": "1306",
+    "name": "Binary Logistic"
+  },
+  {
+    "id": "1309",
+    "name": "Cox Regression"
+  },
+  {
+    "id": "1320",
+    "name": "Heteroscedasticity Tests"
+  },
+  {
+    "id": "1403",
+    "name": "Rank and Percentile"
+  },
+  {
+    "id": "1404",
+    "name": "Rank Correlations [Spearman R, Kendall Tau, Gamma]"
+  },
+  {
+    "id": "1405",
+    "name": "Fechner Correlation"
+  },
+  {
+    "id": "1401",
+    "name": "2x2 Contingency Table Analysis (tabulated data)"
+  },
+  {
+    "id": "1411",
+    "name": "NxK Contingency Table Analysis (tabulated data)"
+  },
+  {
+    "id": "1406",
+    "name": "Two Independent Samples [Mann-Whitney, Runs Test]"
+  },
+  {
+    "id": "14063",
+    "name": "Two Independent Samples (use group variable)"
+  },
+  {
+    "id": "1407",
+    "name": "Multiple Independent Samples [Kruskal-Wallis, Median Test]"
+  },
+  {
+    "id": "14072",
+    "name": "Multiple Independent Samples (use group variable)"
+  },
+  {
+    "id": "1408",
+    "name": "Two Related Samples [Wilcoxon Pairs, Sign Test]"
+  },
+  {
+    "id": "1409",
+    "name": "Multiple Related Samples [Friedman ANOVA, Concordance]"
+  },
+  {
+    "id": "14092",
+    "name": "Multiple Related Samples (use group variable)"
+  },
+  {
+    "id": "1410",
+    "name": "Cochran's Q Test"
+  },
+  {
+    "id": "1501",
+    "name": "Autocorrelation and Partial Autocorrelation"
+  },
+  {
+    "id": "1503",
+    "name": "Interrupted Series Analysis"
+  },
+  {
+    "id": "1530",
+    "name": "Unit Root Test"
+  },
+  {
+    "id": "1510",
+    "name": "Seasonal Decomposition"
+  },
+  {
+    "id": "1502",
+    "name": "Moving Average"
+  },
+  {
+    "id": "1522",
+    "name": "Exponential Smoothing (Single)"
+  },
+  {
+    "id": "1540",
+    "name": "Exponential Smoothing (Trend)"
+  },
+  {
+    "id": "1520",
+    "name": "Remove Mean"
+  },
+  {
+    "id": "1521",
+    "name": "Differences"
+  },
+  {
+    "id": "1523",
+    "name": "Fast Fourier Transform - Direct"
+  },
+  {
+    "id": "1524",
+    "name": "Fast Fourier Transform - Inverse"
+  },
+  {
+    "id": "1620",
+    "name": "Life Tables"
+  },
+  {
+    "id": "1621",
+    "name": "Kaplan-Meier"
+  },
+  {
+    "id": "1622",
+    "name": "Nelson-Aalen"
+  },
+  {
+    "id": "1601",
+    "name": "Probit Analysis"
+  },
+  {
+    "id": "1610",
+    "name": "ROC Curve"
+  },
+  {
+    "id": "1611",
+    "name": "Compare ROC Curves (Paired)"
+  },
+  {
+    "id": "1630",
+    "name": "Bland-Altman Plot"
+  },
+  {
+    "id": "3001",
+    "name": "Stack Columns"
+  },
+  {
+    "id": "3002",
+    "name": "Unstack Column"
+  },
+  {
+    "id": "3200",
+    "name": "Transpose"
+  },
+  {
+    "id": "3003",
+    "name": "Standardize Variables"
+  },
+  {
+    "id": "3005",
+    "name": "Box-Cox Transform"
+  },
+  {
+    "id": "3100",
+    "name": "Discrete Uniform"
+  },
+  {
+    "id": "3101",
+    "name": "Continuous Uniform"
+  },
+  {
+    "id": "3102",
+    "name": "Normal"
+  },
+  {
+    "id": "3103",
+    "name": "Chi-Square"
+  },
+  {
+    "id": "3104",
+    "name": "F-distribution"
+  },
+  {
+    "id": "1701",
+    "name": "Prevalence survey with finite population correction"
+  },
+  {
+    "id": "1702",
+    "name": "Binomial exact confidence interval"
+  },
+  {
+    "id": "1703",
+    "name": "Sample size needed to observe at least N events"
+  },
+  {
+    "id": "1704",
+    "name": "Sample size for a case-control study"
+  },
+  {
+    "id": "3201",
+    "name": "Matrix Multiplication"
+  },
+  {
+    "id": "3202",
+    "name": "Inverse Matrix"
+  },
+  {
+    "id": "3203",
+    "name": "Matrix Determinant"
+  },
+  {
+    "id": "3301",
+    "name": "Random Sample"
+  },
+  {
+    "id": "3302",
+    "name": "Periodic Sample"
+  },
+  {
+    "id": "3303",
+    "name": "Conditional Sample"
+  },
+  {
+    "id": "4001",
+    "name": "Box Plot"
+  },
+  {
+    "id": "4003",
+    "name": "Stem-and-Leaf Plot"
+  },
+  {
+    "id": "4002",
+    "name": "Scatter Plot"
+  },
+  {
+    "id": "4011",
+    "name": "Normal Q-Q Plot"
+  },
+  {
+    "id": "4012",
+    "name": "Beta Q-Q Plot"
+  },
+  {
+    "id": "4013",
+    "name": "Chi-Square Q-Q Plot"
+  },
+  {
+    "id": "4014",
+    "name": "Gamma Q-Q Plot"
+  },
+  {
+    "id": "4015",
+    "name": "Log-normal Q-Q Plot"
+  },
+  {
+    "id": "4016",
+    "name": "Student's t Q-Q Plot"
+  },
+  {
+    "id": "4017",
+    "name": "Uniform Q-Q Plot"
+  },
+  {
+    "id": "4018",
+    "name": "Weibull Q-Q Plot"
+  },
+  {
+    "id": "4102",
+    "name": "Xbar-R Chart"
+  },
+  {
+    "id": "4103",
+    "name": "Xbar-S Chart"
+  },
+  {
+    "id": "4104",
+    "name": "CUSUM Chart"
+  },
+  {
+    "id": "4105",
+    "name": "P/NP Chart"
+  },
+  {
+    "id": "4106",
+    "name": "C Chart"
+  },
+  {
+    "id": "4107",
+    "name": "U Chart"
+  },
+  {
+    "id": "4108",
+    "name": "Individuals and Moving Range"
+  }
+]

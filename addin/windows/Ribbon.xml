@@ -1,0 +1,163 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+  <ribbon>
+    <tabs>
+      <tab id="StatWorkbenchTab" label="StatWorkbench">
+        <group id="StatWorkbenchLaunch" label="Workbook">
+          <button id="StatWorkbenchOpen" label="Open StatWorkbench" imageMso="FileOpen" onAction="OnAction" tag="open" />
+          <button id="StatWorkbenchPreferences" label="Preferences" onAction="OnAction" tag="preferences" />
+        </group>
+        <group id="StatWorkbenchStatistics" label="Analyze selected cells">
+          <menu id="StatWorkbenchCategory0" label="Basic statistics">
+            <button id="StatWorkbenchAnalysis1001" label="Descriptive Statistics…" onAction="OnAction" tag="analysis:1001" />
+            <button id="StatWorkbenchAnalysis1002" label="Descriptive Statistics (use group variable)…" onAction="OnAction" tag="analysis:1002" />
+            <button id="StatWorkbenchAnalysis1004" label="One-Sample z-Test for Mean…" onAction="OnAction" tag="analysis:1004" />
+            <button id="StatWorkbenchAnalysis1007" label="Two-Sample z-Test for Means…" onAction="OnAction" tag="analysis:1007" />
+            <button id="StatWorkbenchAnalysis1003" label="One-Sample T-Test…" onAction="OnAction" tag="analysis:1003" />
+            <button id="StatWorkbenchAnalysis1005" label="Two-Sample T-Test…" onAction="OnAction" tag="analysis:1005" />
+            <button id="StatWorkbenchAnalysis10052" label="Two-Sample T-Test (use summarized data)…" onAction="OnAction" tag="analysis:10052" />
+            <button id="StatWorkbenchAnalysis10053" label="Two-Sample T-Test (use group variable)…" onAction="OnAction" tag="analysis:10053" />
+            <button id="StatWorkbenchAnalysis1008" label="F-Test for Variances…" onAction="OnAction" tag="analysis:1008" />
+            <button id="StatWorkbenchAnalysis1009" label="Linear Correlations [Pearson]…" onAction="OnAction" tag="analysis:1009" />
+            <button id="StatWorkbenchAnalysis1010" label="Covariance…" onAction="OnAction" tag="analysis:1010" />
+            <button id="StatWorkbenchAnalysis1016" label="Partial Correlations…" onAction="OnAction" tag="analysis:1016" />
+            <button id="StatWorkbenchAnalysis1011" label="Normality Tests…" onAction="OnAction" tag="analysis:1011" />
+            <button id="StatWorkbenchAnalysis1012" label="Frequency Tables (categorical data)…" onAction="OnAction" tag="analysis:1012" />
+            <button id="StatWorkbenchAnalysis1013" label="Frequency Tables (continuous data)…" onAction="OnAction" tag="analysis:1013" />
+            <button id="StatWorkbenchAnalysis1014" label="Cross Tabulation and Chi-Square…" onAction="OnAction" tag="analysis:1014" />
+            <button id="StatWorkbenchAnalysis1015" label="Histogram…" onAction="OnAction" tag="analysis:1015" />
+          </menu>
+          <menu id="StatWorkbenchCategory1" label="ANOVA and multivariate">
+            <button id="StatWorkbenchAnalysis1102" label="One-way ANOVA (unstacked)…" onAction="OnAction" tag="analysis:1102" />
+            <button id="StatWorkbenchAnalysis1103" label="One-way ANOVA (use group variable)…" onAction="OnAction" tag="analysis:1103" />
+            <button id="StatWorkbenchAnalysis1104" label="Two-way ANOVA…" onAction="OnAction" tag="analysis:1104" />
+            <button id="StatWorkbenchAnalysis1105" label="Three-way ANOVA…" onAction="OnAction" tag="analysis:1105" />
+            <button id="StatWorkbenchAnalysis1108" label="Repeated Measures (Within Subjects) ANOVA…" onAction="OnAction" tag="analysis:1108" />
+            <button id="StatWorkbenchAnalysis1106" label="Mixed Treatment by Subjects ANOVA…" onAction="OnAction" tag="analysis:1106" />
+            <button id="StatWorkbenchAnalysis1107" label="Mixed ANOVA with Two Treatments…" onAction="OnAction" tag="analysis:1107" />
+            <button id="StatWorkbenchAnalysis1109" label="General Linear Model (GLM)…" onAction="OnAction" tag="analysis:1109" />
+            <button id="StatWorkbenchAnalysis1110" label="Discriminant Function Analysis…" onAction="OnAction" tag="analysis:1110" />
+            <button id="StatWorkbenchAnalysis1120" label="Principal Component Analysis (PCA)…" onAction="OnAction" tag="analysis:1120" />
+            <button id="StatWorkbenchAnalysis1121" label="Factor Analysis…" onAction="OnAction" tag="analysis:1121" />
+            <button id="StatWorkbenchAnalysis1130" label="K-Means Clustering…" onAction="OnAction" tag="analysis:1130" />
+            <button id="StatWorkbenchAnalysis1132" label="Hierarchical Clustering…" onAction="OnAction" tag="analysis:1132" />
+          </menu>
+          <menu id="StatWorkbenchCategory2" label="Design of experiments">
+            <button id="StatWorkbenchAnalysis1201" label="1: Three Factors (A, B, C) With No Interactions…" onAction="OnAction" tag="analysis:1201" />
+            <button id="StatWorkbenchAnalysis1202" label="2: Four Factors (A, B, C, D) With Partial Interactions…" onAction="OnAction" tag="analysis:1202" />
+            <button id="StatWorkbenchAnalysis1203" label="3: Four Factors (A, B, C, D) With Partial Confounding Of AxBxC Interaction…" onAction="OnAction" tag="analysis:1203" />
+            <button id="StatWorkbenchAnalysis1204" label="4: Greco-Latin With No Interactions…" onAction="OnAction" tag="analysis:1204" />
+            <button id="StatWorkbenchAnalysis1205" label="5: Repeated Measures Latin Square (Random Assignment Of Groups To Rows)…" onAction="OnAction" tag="analysis:1205" />
+            <button id="StatWorkbenchAnalysis1206" label="6: Fractional Replication Of A Three-Factor Factorial Experiment In Incomplete Blocks…" onAction="OnAction" tag="analysis:1206" />
+            <button id="StatWorkbenchAnalysis1207" label="7: Plan 5 With Superimposing An Orthogonal Latin Square…" onAction="OnAction" tag="analysis:1207" />
+            <button id="StatWorkbenchAnalysis1208" label="8: AxBxC (Same Squares Used For All Levels Of Factor C)…" onAction="OnAction" tag="analysis:1208" />
+          </menu>
+          <menu id="StatWorkbenchCategory3" label="Regression">
+            <button id="StatWorkbenchAnalysis1301" label="Multiple Linear Regression…" onAction="OnAction" tag="analysis:1301" />
+            <button id="StatWorkbenchAnalysis1303" label="Polynomial Regression…" onAction="OnAction" tag="analysis:1303" />
+            <button id="StatWorkbenchAnalysis1310" label="Curve Fit…" onAction="OnAction" tag="analysis:1310" />
+            <button id="StatWorkbenchAnalysis1302" label="Weighted Least Squares Regression…" onAction="OnAction" tag="analysis:1302" />
+            <button id="StatWorkbenchAnalysis1304" label="Forward Stepwise…" onAction="OnAction" tag="analysis:1304" />
+            <button id="StatWorkbenchAnalysis1305" label="Backward Stepwise…" onAction="OnAction" tag="analysis:1305" />
+            <button id="StatWorkbenchAnalysis1307" label="Best Subsets Regression…" onAction="OnAction" tag="analysis:1307" />
+            <button id="StatWorkbenchAnalysis1306" label="Binary Logistic…" onAction="OnAction" tag="analysis:1306" />
+            <button id="StatWorkbenchAnalysis1320" label="Heteroscedasticity Tests…" onAction="OnAction" tag="analysis:1320" />
+          </menu>
+          <menu id="StatWorkbenchCategory4" label="Survival analysis">
+            <button id="StatWorkbenchAnalysis1309" label="Cox Regression…" onAction="OnAction" tag="analysis:1309" />
+            <button id="StatWorkbenchAnalysis1620" label="Life Tables…" onAction="OnAction" tag="analysis:1620" />
+            <button id="StatWorkbenchAnalysis1621" label="Kaplan-Meier…" onAction="OnAction" tag="analysis:1621" />
+            <button id="StatWorkbenchAnalysis1622" label="Nelson-Aalen…" onAction="OnAction" tag="analysis:1622" />
+            <button id="StatWorkbenchAnalysis1601" label="Probit Analysis…" onAction="OnAction" tag="analysis:1601" />
+            <button id="StatWorkbenchAnalysis1610" label="ROC Curve…" onAction="OnAction" tag="analysis:1610" />
+            <button id="StatWorkbenchAnalysis1611" label="Compare ROC Curves (Paired)…" onAction="OnAction" tag="analysis:1611" />
+            <button id="StatWorkbenchAnalysis1630" label="Bland-Altman Plot…" onAction="OnAction" tag="analysis:1630" />
+          </menu>
+          <menu id="StatWorkbenchCategory5" label="Nonparametric statistics">
+            <button id="StatWorkbenchAnalysis1403" label="Rank and Percentile…" onAction="OnAction" tag="analysis:1403" />
+            <button id="StatWorkbenchAnalysis1404" label="Rank Correlations [Spearman R, Kendall Tau, Gamma]…" onAction="OnAction" tag="analysis:1404" />
+            <button id="StatWorkbenchAnalysis1405" label="Fechner Correlation…" onAction="OnAction" tag="analysis:1405" />
+            <button id="StatWorkbenchAnalysis1401" label="2x2 Contingency Table Analysis (tabulated data)…" onAction="OnAction" tag="analysis:1401" />
+            <button id="StatWorkbenchAnalysis1411" label="NxK Contingency Table Analysis (tabulated data)…" onAction="OnAction" tag="analysis:1411" />
+            <button id="StatWorkbenchAnalysis1406" label="Two Independent Samples [Mann-Whitney, Runs Test]…" onAction="OnAction" tag="analysis:1406" />
+            <button id="StatWorkbenchAnalysis14063" label="Two Independent Samples (use group variable)…" onAction="OnAction" tag="analysis:14063" />
+            <button id="StatWorkbenchAnalysis1407" label="Multiple Independent Samples [Kruskal-Wallis, Median Test]…" onAction="OnAction" tag="analysis:1407" />
+            <button id="StatWorkbenchAnalysis14072" label="Multiple Independent Samples (use group variable)…" onAction="OnAction" tag="analysis:14072" />
+            <button id="StatWorkbenchAnalysis1408" label="Two Related Samples [Wilcoxon Pairs, Sign Test]…" onAction="OnAction" tag="analysis:1408" />
+            <button id="StatWorkbenchAnalysis1409" label="Multiple Related Samples [Friedman ANOVA, Concordance]…" onAction="OnAction" tag="analysis:1409" />
+            <button id="StatWorkbenchAnalysis14092" label="Multiple Related Samples (use group variable)…" onAction="OnAction" tag="analysis:14092" />
+            <button id="StatWorkbenchAnalysis1410" label="Cochran's Q Test…" onAction="OnAction" tag="analysis:1410" />
+          </menu>
+          <menu id="StatWorkbenchCategory6" label="Time series">
+            <button id="StatWorkbenchAnalysis1501" label="Autocorrelation and Partial Autocorrelation…" onAction="OnAction" tag="analysis:1501" />
+            <button id="StatWorkbenchAnalysis1503" label="Interrupted Series Analysis…" onAction="OnAction" tag="analysis:1503" />
+            <button id="StatWorkbenchAnalysis1530" label="Unit Root Test…" onAction="OnAction" tag="analysis:1530" />
+            <button id="StatWorkbenchAnalysis1510" label="Seasonal Decomposition…" onAction="OnAction" tag="analysis:1510" />
+            <button id="StatWorkbenchAnalysis1502" label="Moving Average…" onAction="OnAction" tag="analysis:1502" />
+            <button id="StatWorkbenchAnalysis1522" label="Exponential Smoothing (Single)…" onAction="OnAction" tag="analysis:1522" />
+            <button id="StatWorkbenchAnalysis1540" label="Exponential Smoothing (Trend)…" onAction="OnAction" tag="analysis:1540" />
+            <button id="StatWorkbenchAnalysis1520" label="Remove Mean…" onAction="OnAction" tag="analysis:1520" />
+            <button id="StatWorkbenchAnalysis1521" label="Differences…" onAction="OnAction" tag="analysis:1521" />
+            <button id="StatWorkbenchAnalysis1523" label="Fast Fourier Transform - Direct…" onAction="OnAction" tag="analysis:1523" />
+            <button id="StatWorkbenchAnalysis1524" label="Fast Fourier Transform - Inverse…" onAction="OnAction" tag="analysis:1524" />
+            <button id="StatWorkbenchAnalysisstochastic_markov_chain" label="Markov Chain &amp; Ergodicity…" onAction="OnAction" tag="analysis:stochastic.markov_chain" />
+          </menu>
+          <menu id="StatWorkbenchCategory7" label="Data">
+            <button id="StatWorkbenchAnalysis3001" label="Stack Columns…" onAction="OnAction" tag="analysis:3001" />
+            <button id="StatWorkbenchAnalysis3002" label="Unstack Column…" onAction="OnAction" tag="analysis:3002" />
+            <button id="StatWorkbenchAnalysis3200" label="Transpose…" onAction="OnAction" tag="analysis:3200" />
+            <button id="StatWorkbenchAnalysis3003" label="Standardize Variables…" onAction="OnAction" tag="analysis:3003" />
+            <button id="StatWorkbenchAnalysis3005" label="Box-Cox Transform…" onAction="OnAction" tag="analysis:3005" />
+            <button id="StatWorkbenchAnalysis3201" label="Matrix Multiplication…" onAction="OnAction" tag="analysis:3201" />
+            <button id="StatWorkbenchAnalysis3202" label="Inverse Matrix…" onAction="OnAction" tag="analysis:3202" />
+            <button id="StatWorkbenchAnalysis3203" label="Matrix Determinant…" onAction="OnAction" tag="analysis:3203" />
+            <button id="StatWorkbenchAnalysis3301" label="Random Sample…" onAction="OnAction" tag="analysis:3301" />
+            <button id="StatWorkbenchAnalysis3302" label="Periodic Sample…" onAction="OnAction" tag="analysis:3302" />
+            <button id="StatWorkbenchAnalysis3303" label="Conditional Sample…" onAction="OnAction" tag="analysis:3303" />
+          </menu>
+          <menu id="StatWorkbenchCategory8" label="Random numbers">
+            <button id="StatWorkbenchAnalysis3100" label="Discrete Uniform…" onAction="OnAction" tag="analysis:3100" />
+            <button id="StatWorkbenchAnalysis3101" label="Continuous Uniform…" onAction="OnAction" tag="analysis:3101" />
+            <button id="StatWorkbenchAnalysis3102" label="Normal…" onAction="OnAction" tag="analysis:3102" />
+            <button id="StatWorkbenchAnalysis3103" label="Chi-Square…" onAction="OnAction" tag="analysis:3103" />
+            <button id="StatWorkbenchAnalysis3104" label="F-distribution…" onAction="OnAction" tag="analysis:3104" />
+          </menu>
+          <menu id="StatWorkbenchCategory9" label="Sample size">
+            <button id="StatWorkbenchAnalysis1701" label="Prevalence survey with finite population correction…" onAction="OnAction" tag="analysis:1701" />
+            <button id="StatWorkbenchAnalysis1702" label="Binomial exact confidence interval…" onAction="OnAction" tag="analysis:1702" />
+            <button id="StatWorkbenchAnalysis1703" label="Sample size needed to observe at least N events…" onAction="OnAction" tag="analysis:1703" />
+            <button id="StatWorkbenchAnalysis1704" label="Sample size for a case-control study…" onAction="OnAction" tag="analysis:1704" />
+          </menu>
+          <menu id="StatWorkbenchCategory10" label="Charts">
+            <button id="StatWorkbenchAnalysis4001" label="Box Plot…" onAction="OnAction" tag="analysis:4001" />
+            <button id="StatWorkbenchAnalysis4003" label="Stem-and-Leaf Plot…" onAction="OnAction" tag="analysis:4003" />
+            <button id="StatWorkbenchAnalysis4002" label="Scatter Plot…" onAction="OnAction" tag="analysis:4002" />
+            <button id="StatWorkbenchAnalysis4011" label="Normal Q-Q Plot…" onAction="OnAction" tag="analysis:4011" />
+            <button id="StatWorkbenchAnalysis4012" label="Beta Q-Q Plot…" onAction="OnAction" tag="analysis:4012" />
+            <button id="StatWorkbenchAnalysis4013" label="Chi-Square Q-Q Plot…" onAction="OnAction" tag="analysis:4013" />
+            <button id="StatWorkbenchAnalysis4014" label="Gamma Q-Q Plot…" onAction="OnAction" tag="analysis:4014" />
+            <button id="StatWorkbenchAnalysis4015" label="Log-normal Q-Q Plot…" onAction="OnAction" tag="analysis:4015" />
+            <button id="StatWorkbenchAnalysis4016" label="Student's t Q-Q Plot…" onAction="OnAction" tag="analysis:4016" />
+            <button id="StatWorkbenchAnalysis4017" label="Uniform Q-Q Plot…" onAction="OnAction" tag="analysis:4017" />
+            <button id="StatWorkbenchAnalysis4018" label="Weibull Q-Q Plot…" onAction="OnAction" tag="analysis:4018" />
+            <button id="StatWorkbenchAnalysis4102" label="Xbar-R Chart…" onAction="OnAction" tag="analysis:4102" />
+            <button id="StatWorkbenchAnalysis4103" label="Xbar-S Chart…" onAction="OnAction" tag="analysis:4103" />
+            <button id="StatWorkbenchAnalysis4104" label="CUSUM Chart…" onAction="OnAction" tag="analysis:4104" />
+            <button id="StatWorkbenchAnalysis4105" label="P/NP Chart…" onAction="OnAction" tag="analysis:4105" />
+            <button id="StatWorkbenchAnalysis4106" label="C Chart…" onAction="OnAction" tag="analysis:4106" />
+            <button id="StatWorkbenchAnalysis4107" label="U Chart…" onAction="OnAction" tag="analysis:4107" />
+            <button id="StatWorkbenchAnalysis4108" label="Individuals and Moving Range…" onAction="OnAction" tag="analysis:4108" />
+          </menu>
+          <menu id="StatWorkbenchCategory11" label="Dependence models">
+            <button id="StatWorkbenchAnalysiscopula_bivariate" label="Bivariate Copulas…" onAction="OnAction" tag="analysis:copula.bivariate" />
+            <button id="StatWorkbenchAnalysisdependence_association" label="Correlation Matrix…" onAction="OnAction" tag="analysis:dependence.association" />
+            <button id="StatWorkbenchAnalysisdependence_partial" label="Partial Correlation…" onAction="OnAction" tag="analysis:dependence.partial" />
+            <button id="StatWorkbenchAnalysisdependence_distance" label="Distance Correlation…" onAction="OnAction" tag="analysis:dependence.distance" />
+            <button id="StatWorkbenchAnalysisdependence_mutual_information" label="Binned Mutual Information…" onAction="OnAction" tag="analysis:dependence.mutual_information" />
+            <button id="StatWorkbenchAnalysisdependence_tail_coexceedance" label="Empirical Tail Co-exceedance…" onAction="OnAction" tag="analysis:dependence.tail_coexceedance" />
+            <button id="StatWorkbenchAnalysisdependence_lead_lag" label="Lead–Lag Cross-Correlation…" onAction="OnAction" tag="analysis:dependence.lead_lag" />
+          </menu>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
