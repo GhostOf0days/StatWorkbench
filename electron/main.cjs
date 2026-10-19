@@ -201,7 +201,13 @@ async function createWindow() {
     await fs.promises.writeFile(path.join(smokeFolder,'input.spjs'),JSON.stringify(require('./smoke-input.json')));
     let importIndex=0;
     dialog.showOpenDialog=async (_window,options)=>({canceled:false,filePaths:[path.join(smokeFolder,options.title==='Open project'?'smoke.statworkbench.json':importIndex++===0?'input.csv':'input.spjs')]});
-    dialog.showSaveDialog=async (_window,options)=>({canceled:false,filePath:path.join(smokeFolder,options.title==='Save project'?'smoke.statworkbench.json':options.title==='Export analysis report'?'report.html':options.title==='Export original project'?'export.spjs':'export.csv')});
+    dialog.showSaveDialog=async (_window,options)=>{
+      let saveName='export.csv';
+      if(options.title==='Save project')saveName='smoke.statworkbench.json';
+      else if(options.title==='Export analysis report')saveName='report.html';
+      else if(path.extname(options.defaultPath||'').toLowerCase()==='.spjs')saveName='export.spjs';
+      return {canceled:false,filePath:path.join(smokeFolder,saveName)};
+    };
   }
   preferencesStore=createPreferencesStore(path.join(smoke?smokeFolder:app.getPath('userData'),'preferences.json'));
   favorites=createFavoritesStore(path.join(smoke?smokeFolder:app.getPath('userData'),'favorites.json'));
