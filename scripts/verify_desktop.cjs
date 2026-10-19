@@ -15,11 +15,14 @@ const packageExecutable = process.platform === 'darwin'
   : path.join('release', process.arch === 'x64' ? 'linux-unpacked' : `linux-${process.arch}-unpacked`, 'statworkbench-desktop');
 const executable = packaged ? path.resolve(executableArgument !== -1 ? process.argv[executableArgument + 1] : path.join(root, packageExecutable)) : require('electron');
 const output = path.resolve(process.env.STATWORKBENCH_SMOKE_OUTPUT || path.join(root, 'test-artifacts', packaged ? 'native-packaged' : 'native-development'));
+// Headless Linux CI's Xvfb runner has no usable GPU device. Keep the smoke
+// workflow on Chromium's software path so canvas/workbook rendering is stable.
+const displayArguments = process.platform === 'linux' ? ['--disable-gpu'] : [];
 fs.mkdirSync(output, {recursive: true});
 const started = Date.now();
 const logPath = path.join(output, 'desktop-runtime.log');
 const log = fs.createWriteStream(logPath);
-const child = spawn(executable, [...(packaged ? [] : [root]), '--smoke-test'], {
+const child = spawn(executable, [...(packaged ? [] : [root]), '--smoke-test', ...displayArguments], {
   cwd: root, env: {...process.env, STATWORKBENCH_SMOKE_OUTPUT: output}, stdio: ['ignore', 'pipe', 'pipe'],
 });
 let timedOut = false, finished = false, timeoutPhase = null, workflowCompletedAt = null, shutdownTimeout, stdoutTail = '';
