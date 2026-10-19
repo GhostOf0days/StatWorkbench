@@ -16,7 +16,7 @@ See [supported features and formats](docs/COMPATIBILITY.md), [Dependence methods
 
 ## Downloads
 
-Download the latest desktop installers from [GitHub Releases](https://github.com/GhostOf0days/StatWorkbench/releases/latest). Releases include macOS, Windows, and Linux builds when the cross-platform build checks pass. macOS and Windows builds are currently unsigned and may require the operating system's manual first-open confirmation.
+Download the latest desktop installers from [GitHub Releases](https://github.com/GhostOf0days/StatWorkbench/releases/latest). Future public releases require Developer ID signing and Apple notarization on macOS, and Authenticode signing on Windows. SmartScreen may still warn about a newly published Windows app until its reputation builds; see [code signing and release trust](docs/CODE_SIGNING.md). Releases also include SHA-256 checksums. The currently published v0.1.0 installers predate these signing checks and remain unsigned.
 
 See [the architecture guide](docs/ARCHITECTURE.md) for module boundaries and the analysis extension contract.
 

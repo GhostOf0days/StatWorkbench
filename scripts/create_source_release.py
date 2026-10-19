@@ -15,7 +15,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 ROOT_FILES = (
     "README.md", "LICENSE", "THIRD_PARTY_NOTICES.md", "CONTRACT.md", ".gitignore", ".gitattributes", "package.json",
-    "package-lock.json", "vite.config.mjs", "requirements.txt", "requirements-formats.txt", "requirements-test.txt",
+    "package-lock.json", "electron-builder.config.cjs", "vite.config.mjs", "requirements.txt", "requirements-formats.txt", "requirements-test.txt",
     ".github/workflows/build.yml",
     "electron/main.cjs", "electron/preload.cjs", "electron/project.cjs", "electron/procedures.json", "electron/favorites.cjs",
     "renderer/app.js", "renderer/charts.js", "renderer/index.html", "renderer/styles.css",
@@ -29,7 +29,7 @@ DIRECTORY_PATTERNS = {
     "backend": ("*.py", "*.md", "requirements-build.txt"),
     "scripts": ("*.py", "*.cjs"),
     "tests": ("__init__.py", "reference_descriptive.json", "reference_crosstab.json", "test_*.py", "test_*.cjs", "test_*.mjs", "workbook-harness.html"),
-    "docs": ("ARCHITECTURE.md", "COMPATIBILITY.md", "MAC_SPREADSHEETS.md", "SPJS_INTEROPERABILITY.md", "WINDOWS_EXCEL.md", "copulas.md", "dependence.md", "stochastic-processes.md"),
+    "docs": ("ARCHITECTURE.md", "CODE_SIGNING.md", "COMPATIBILITY.md", "MAC_SPREADSHEETS.md", "SPJS_INTEROPERABILITY.md", "WINDOWS_EXCEL.md", "copulas.md", "dependence.md", "stochastic-processes.md"),
     "licenses": ("*.txt", "*.json"),
 }
 EXCLUDED_PARTS = {".git", ".venv", "node_modules", "__pycache__", ".pytest_cache", "build", "dist", "dist-backend", "dist-windows", "release", "test-artifacts", "results", "private-evidence"}

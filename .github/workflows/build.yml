@@ -97,8 +97,56 @@ jobs:
           sudo chown root:root release/linux-unpacked/chrome-sandbox
           sudo chmod 4755 release/linux-unpacked/chrome-sandbox
           xvfb-run -a node scripts/verify_desktop.cjs --packaged
-      - name: Build desktop distribution
+      - name: Require trusted signing credentials for public releases
+        if: startsWith(github.ref, 'refs/tags/v') && runner.os == 'macOS'
+        shell: bash
+        env:
+          MAC_CSC_LINK: ${{ secrets.MAC_CSC_LINK }}
+          MAC_CSC_KEY_PASSWORD: ${{ secrets.MAC_CSC_KEY_PASSWORD }}
+          APPLE_API_KEY: ${{ secrets.APPLE_API_KEY }}
+          APPLE_API_KEY_ID: ${{ secrets.APPLE_API_KEY_ID }}
+          APPLE_API_ISSUER: ${{ secrets.APPLE_API_ISSUER }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+        run: |
+          for name in MAC_CSC_LINK MAC_CSC_KEY_PASSWORD APPLE_API_KEY APPLE_API_KEY_ID APPLE_API_ISSUER APPLE_TEAM_ID; do
+            if [[ -z "${!name}" ]]; then
+              echo "::error::Missing required GitHub Actions secret for $name. See docs/CODE_SIGNING.md."
+              exit 1
+            fi
+          done
+      - name: Require trusted signing credentials for public releases
+        if: startsWith(github.ref, 'refs/tags/v') && runner.os == 'Windows'
+        shell: pwsh
+        env:
+          WIN_CSC_LINK: ${{ secrets.WIN_CSC_LINK }}
+          WIN_CSC_KEY_PASSWORD: ${{ secrets.WIN_CSC_KEY_PASSWORD }}
+        run: |
+          if (!$env:WIN_CSC_LINK) { throw 'Missing GitHub Actions secret WIN_CSC_LINK. See docs/CODE_SIGNING.md.' }
+          if (!$env:WIN_CSC_KEY_PASSWORD) { throw 'Missing GitHub Actions secret WIN_CSC_KEY_PASSWORD. See docs/CODE_SIGNING.md.' }
+      - name: Build signed and notarized macOS distribution
+        if: runner.os == 'macOS'
+        env:
+          STATWORKBENCH_RELEASE_SIGNING: ${{ startsWith(github.ref, 'refs/tags/v') && '1' || '0' }}
+          CSC_LINK: ${{ startsWith(github.ref, 'refs/tags/v') && secrets.MAC_CSC_LINK || '' }}
+          CSC_KEY_PASSWORD: ${{ startsWith(github.ref, 'refs/tags/v') && secrets.MAC_CSC_KEY_PASSWORD || '' }}
+          APPLE_API_KEY: ${{ startsWith(github.ref, 'refs/tags/v') && secrets.APPLE_API_KEY || '' }}
+          APPLE_API_KEY_ID: ${{ startsWith(github.ref, 'refs/tags/v') && secrets.APPLE_API_KEY_ID || '' }}
+          APPLE_API_ISSUER: ${{ startsWith(github.ref, 'refs/tags/v') && secrets.APPLE_API_ISSUER || '' }}
+          APPLE_TEAM_ID: ${{ startsWith(github.ref, 'refs/tags/v') && secrets.APPLE_TEAM_ID || '' }}
         run: npm run dist -- --publish never
+      - name: Build Authenticode-signed Windows distribution
+        if: runner.os == 'Windows'
+        env:
+          STATWORKBENCH_RELEASE_SIGNING: ${{ startsWith(github.ref, 'refs/tags/v') && '1' || '0' }}
+          WIN_CSC_LINK: ${{ startsWith(github.ref, 'refs/tags/v') && secrets.WIN_CSC_LINK || '' }}
+          WIN_CSC_KEY_PASSWORD: ${{ startsWith(github.ref, 'refs/tags/v') && secrets.WIN_CSC_KEY_PASSWORD || '' }}
+        run: npm run dist -- --publish never
+      - name: Build Linux distribution
+        if: runner.os == 'Linux'
+        run: npm run dist -- --publish never
+      - name: Verify trusted native signatures
+        if: runner.os != 'Linux' && startsWith(github.ref, 'refs/tags/v')
+        run: node scripts/verify-release-signing.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -153,6 +201,8 @@ jobs:
                   raise SystemExit(f"Missing {label} release asset ({suffix}). Found: {files}")
           PY
           python3 scripts/create_source_release.py
+          checksum="dist-assets/StatWorkbench-${GITHUB_REF_NAME}-SHA256SUMS"
+          find dist-assets -maxdepth 1 -type f ! -path "$checksum" -print0 | sort -z | xargs -0 sha256sum > "$checksum"
       - name: Publish downloadable release
         env:
           GH_TOKEN: ${{ github.token }}
