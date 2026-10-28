@@ -21,7 +21,7 @@
     "build:windows-bridge": "python scripts/build_windows_bridge.py"
   },
   "devDependencies": {
-    "electron": "44.7.2",
+    "electron": "44.9.1",
     "electron-builder": "26.15.3",
     "vite": "8.3.4"
   },
